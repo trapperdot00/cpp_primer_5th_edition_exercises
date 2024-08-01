@@ -1,0 +1,9 @@
+input:	XY 1 2
+		XY 2 2
+		AB 2 4
+		AB 4 2
+		CD 1 1
+
+output:	2 transactions for ISBN XY
+		2 transactions for ISBN AB
+		1 transactions for ISBN CD

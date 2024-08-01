@@ -1,0 +1,2 @@
+if the input values are all equal, then the number counter will only be displayed when EOF is read, for the inputted number
+if there are no duplicates in the input, then each number's counter will be displayed after another gets inputted

@@ -1,0 +1,11 @@
+a for loop has a header which includes an initialization statement, a condition, and an expression
+a while loop's "header" only has the condition
+
+a for loop is best used for when there is some kind of work to do after each statement execution, that is the same for every passes
+a while loop is more flexible, as it only contains the condition, we can define any kind of work in it's statement body, but we need to initialize any kind of variables we want to use in the loop or in the condition before the while statement
+
+the initialized variable in the for header is destroyed after the loop ends
+
+you could always make a for statement behave like a while loop:
+	for (; condition; )	
+but it is not recommended!!

@@ -1,0 +1,5 @@
+std::cout << "The sum of " << v1;
+<< " and " << v2;
+<< " is " << v1 + v2 << std::endl;
+
+// the code is illegal, no left-hand side operand for the output statements in line 2 and 3

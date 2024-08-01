@@ -1,0 +1,13 @@
+indicate which statements are legal
+
+std::cout << "/*";					// perfectly legal output statement
+
+std::cout << "*/";					// still legal
+
+std::cout << /* "*/" */;			// illegal: multiline comment comments out the first string delimiter, only the second is seen
+// what the compiler sees of the code:
+	std::cout << ";
+
+std::cout << /* "*/" /* "/*" */;	// legal but why would you do this
+// what the compiler sees:
+	std::cout << " /* ";
