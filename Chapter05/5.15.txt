@@ -1,0 +1,28 @@
+a)
+for (int ix = 0; ix != sz; ++ix) {}
+if (ix != sz)
+
+// ix is visible only inside the for loop
+fix:
+
+int ix;
+for (ix = 0; ix != sz; ++ix) {}
+if (ix != sz)
+
+b)
+int ix;
+for (ix != sz; ++ix) {}
+
+// init-statement missing
+fix:
+
+int ix;
+for (ix = 0; ix != sz; ++ix) {}
+
+c)
+for (int ix = 0; ix != sz; ++ix, ++ sz) {}
+
+// ix will never reach sz, loop won't end
+fix:
+
+for (int ix = 0; ix != sz; ++ix) {}

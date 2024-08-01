@@ -1,0 +1,16 @@
+a:
+while (string::iterator iter != s.end()) {	/*	*/	}
+// iter not initialized
+fix:
+string::iterator iter = s.begin();
+while (iter != s.end()) {	/*	*/	}
+
+b:
+while (bool status = find(word)) {	/*	*/	}	
+if (!status)	{	/*	*/	}
+
+// status defined in while condition, it is a control variable, cannot be used outside of the statement
+fix:
+bool status;
+while (status = find(word)) {	/*	*/	}
+if (!status)	{	/*	*/	}

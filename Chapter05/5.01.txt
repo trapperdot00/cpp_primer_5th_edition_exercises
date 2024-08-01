@@ -1,0 +1,3 @@
+A null statement is an empty statement
+
+Null statements are used in cases where the language requires a statement but the logic doesn't, like in loops where the header does all of the work

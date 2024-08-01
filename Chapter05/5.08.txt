@@ -1,0 +1,14 @@
+a dangling else is when there are less else statements than there are if statements
+the elses close the nearest if statements
+you can force else grouping with curly braces
+
+1)
+if ()
+	if ()	// else grouped with this if
+else
+
+2)
+if () {		// else grouped with this if
+	if ()
+}
+else 

@@ -1,0 +1,5 @@
+A block is a sequence of statements surrounded by curly braces. It can contain 0 or more statements.
+
+A block is used where the language can only have one statement, but the logic requires more than one.
+
+An empty block is equivalent to a null statement.

@@ -1,0 +1,50 @@
+a)
+do
+	int v1, v2;
+	cout << "Please enter two numbers to sum:" ;
+	if (cin >> v1 >> v2)
+		cout << "Sum is: " << v1 + v2 << endl;
+while (cin);
+
+// this do-while loop is incorrect, because it doesn't have curly braces in it to form a block for the multiple statements
+
+fix:
+
+do {
+	int v1, v2;
+	cout << "Please enter two numbers to sum:";
+	if (cin >> v1 >> v2)
+		cout << "Sum is: " << v1 + v2 << endl;
+} while (cin);
+
+// this loop prompts the user for two numbers, adds them up and prints their sum, loops until the user enters an invalid input
+
+b)
+do {
+	//	...
+} while (int ival = get_response());
+
+// this loop is invalid because you can't have a variable definition inside the while's condition in a do-while loop
+
+fix:
+
+int ival;
+do {
+	//	...
+} while (ival = get_response());
+
+// now this loop loops until ival gets a false value (zero in case of an int)
+
+c)
+do {
+	int ival = get_response();
+} while (ival);
+
+// error: the variable in the condition of a do-while loop needs to be declared outside of the statement body
+
+fix:
+
+int ival;
+do {
+	ival = get_response();
+} while (ival);
