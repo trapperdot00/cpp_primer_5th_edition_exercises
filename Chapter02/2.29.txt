@@ -1,0 +1,6 @@
+i = ic;		// legal
+p1 = p3;	// illegal: low-level const doesn't match
+p1 = &ic;	// illegal: low-level const doesn't match
+p3 = &ic;	// illegal: top-level const pointer can't get assigned a new value
+p2 = p1;	// illegal: top-level const pointer can't get assigned a new value
+ic = *p3;	// illegal: const variable can't get assigned a new value

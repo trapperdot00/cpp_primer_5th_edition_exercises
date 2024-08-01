@@ -1,0 +1,12 @@
+the differences between int, long, long long and short:
+	int, and short have a minimum size of 16 bits or two bytes
+	long has a minimum size of 32 bits or four bytes
+	long long has a minimum size of 64 bits or eight bytes
+
+the differences between an unsigned and a signed type:
+	an unsigned type represents values that are greater than or equal to zero
+	a signed type represents negative or positive numbers
+
+the differences between a float and a double:
+	a float has a minimum size of 6 significant digits
+	a double has a minimum size of 10 significant digits

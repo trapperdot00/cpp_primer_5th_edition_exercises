@@ -1,0 +1,5 @@
+int i, *const cp;		// i is legal, but cp is illegal: const pointers need to be initialized
+int *p1, *const p2;		// p1 is legal, but p2 is illegal: const pointers need to be initialized
+const int ic, &r = ic;	// ic is illegal, const variables need to be initialized, r would be legal if ic had had a value
+const int *const p3;	// illegal: p3 needs to be initialized because of the top-level constness
+const int *p;			// legal

@@ -1,0 +1,6 @@
+const int i = 42;	// i is const int
+auto j = i;			// j is int (top-level const is ignored)
+const auto &k = i;	// k is const int&
+auto *p = &i;		// p is const int*
+const auto j2 = i;	// j2 is const int
+const auto &k2 = i;	// k2 is const int&

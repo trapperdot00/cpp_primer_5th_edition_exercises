@@ -1,0 +1,1 @@
+to calculate a mortgage payment, i would use a floating point type (float or double) for the rate, and an unsigned integer (int, long or long long) for the principal and payment, making sure that i store the amount in cents, instead of dollars for example

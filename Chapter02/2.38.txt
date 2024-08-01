@@ -1,0 +1,4 @@
+decltype
+	returns type of variable, with top-level const included
+auto
+	

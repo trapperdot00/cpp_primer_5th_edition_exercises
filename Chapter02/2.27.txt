@@ -1,0 +1,7 @@
+int i = -1, &r = 0;			// legal: i, illegal: r, because literals can only be assigned to references to consts
+int *const p2 = &i2;		// illegal: p2 can't point to const object, without low-level constness of the pointer
+const int i = -1, &r = 0;	// legal
+const int *const p3 = &i2;	// legal
+const int *p1 = &i2;		// legal
+const int &const r2;		// illegal: no top-level const to references, and doubly illegal: references to const always need to be initialized
+const int i2 = i, &r = i;	// legal: i2, r

@@ -1,0 +1,17 @@
+what do these literals represent? what type does each have?
+
+a)
+"Who goes with F\145rgus?\012"
+// "Who goes with Fergus?" with a newline at the end, type is string literal (const char *)
+
+b)
+3.14e1L
+// 31.4, type is long double
+
+c)
+1024f
+// 1024, type is float
+
+d)
+3.14L
+// 3.14, type is long double

@@ -1,0 +1,3 @@
+pointers are objects, can be uninitialized, can be rebinded to another object
+
+references aren't objects, they are an alias to an object, they can't be rebinded to another object

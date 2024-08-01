@@ -1,0 +1,16 @@
+int i = 0, &r = i;
+const int ci = i, &cr = ci;
+
+auto a = r;		// same as a = i; a is int
+auto b = ci;	// b is int
+auto c = cr;	// same as c = ci; c is int
+auto d = &i;	// d is int*
+auto e = &ci;	// e is const int*
+auto &g = ci;	// g is const int&
+<	----------------	>
+a = 42;			// legal: a is int, will hold the value 42 after the assignment
+b = 42;			// legal: b is int, will hold the value 42 after the assignment
+c = 42;			// legal: c is int, will hold the value 42 after the assignment
+d = 42;			// illegal: d is an int pointer, can't assign a literal to it, only a memory address
+e = 42;			// illegal: e is an const int pointer, can't assign a literal to it, only a memory address
+g = 42;			// illegal: references can not be rebinded

@@ -1,0 +1,3 @@
+int a = 3, b = 4;
+decltype(a) c = a;		// c is int with a value of 3
+decltype(a - b) d = a;	// d is an int& bound to a (assigment is an expression that returns a reference to its left hand operand)

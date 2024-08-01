@@ -1,0 +1,9 @@
+int a = 3, b = 4;
+decltype(a) c = a;		// c is an int
+decltype((b)) d = a;	// d is an int& (decltype used with a variable in parentheses always returns a reference type, whereas decltype with a variable without
+						// 				parentheses return a reference if the variable is a reference itself)
+++c;
+++d;
+
+// values after code finishes:
+// a = 4; b = 4; c = 4;		d is bound to a

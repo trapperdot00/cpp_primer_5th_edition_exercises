@@ -1,0 +1,7 @@
+what, if any, are the differences between the following definitions:
+
+int month = 9, day = 7;
+int month = 09, day = 07;
+
+// the first definitions are in decimal, while the second are in octal format
+// the octal numeral system has digits ranging from 0-7, so month's definition is in error

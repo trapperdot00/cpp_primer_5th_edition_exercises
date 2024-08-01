@@ -1,0 +1,34 @@
+determine the type of each of the following literals, explain the differences among the literals in each of the four examples:
+
+a)
+'a',L'a',"a",L"a"
+
+// 'a' is a character literal
+// L'a' is a wide character literal
+// "a" is a string literal
+// L"a" is a wide character string literal
+
+b)
+10,10u,10L,10uL,012,0xC
+
+// 10 is a decimal
+// 10u is an unsigned decimal
+// 10L is a long decimal
+// 10uL is a long unsigned decimal
+// 012 is an octal
+// 0xC is a hexadecimal
+
+c)
+3.14,3.14f,3.14L
+
+// 3.14 is a double
+// 3.14f is a float
+// 3.14L is a long double
+
+d)
+10,10u,10.,10e-2
+
+// 10 is a decimal
+// 10u is an unsigned decimal
+// 10. is a double
+// 10e-2 is a double
