@@ -1,0 +1,2 @@
+returning a reference is legal when the object we're returning is not local to the function
+returning a reference to const is legal when the object we're returning is not local to the function, and we don't want to use the returned object as an lvalue

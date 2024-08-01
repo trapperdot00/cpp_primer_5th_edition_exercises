@@ -1,0 +1,10 @@
+void manip(int, int);
+double dobj;
+
+manip('a', 'z');
+'a' to int: match through a promotion, rank 3
+'z' to int: match through a promotion, rank 3
+
+manip(55.4, dobj);
+55.4 to int: match through an arithmetic conversion, rank 4
+dobj to int: match through an arithmetic conversion, rank 4

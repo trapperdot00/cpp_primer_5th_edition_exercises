@@ -1,0 +1,2 @@
+candidate functions are a set of overloaded functions that have the same name as the called function, and for which the declaration is visible from the call
+viable functions are functions selected from the candidate functions that have the same parameter count as the argument count, and all the arguments share the same types with the parameters, or be converted to those types

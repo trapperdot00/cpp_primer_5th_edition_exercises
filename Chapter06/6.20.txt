@@ -1,0 +1,3 @@
+reference parameters should always be references to const when the function doesn't mean to change the values of the underlying arguments.
+
+if we make a parameter a plain reference when we should have used a reference to const, we misinform coders that out program may change its arguments values, and limit which objects we can call the function on. for example we can't call a function that has a plain reference in its parameter list, with a const object.

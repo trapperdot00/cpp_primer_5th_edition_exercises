@@ -1,0 +1,2 @@
+A parameter should be a reference type when the type in the parameter can't be copied or we need access to change the argument's value
+A parameter should not be a reference type if we need a copy of the argument's value

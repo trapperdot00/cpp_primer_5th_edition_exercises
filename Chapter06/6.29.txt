@@ -1,0 +1,1 @@
+yes, because it avoids copying the value into another variable, but i have to make sure that the reference is a reference to const, because all values in an initializer_list is const

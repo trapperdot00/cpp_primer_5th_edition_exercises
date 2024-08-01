@@ -1,0 +1,29 @@
+void f();						1
+void f(int);					2
+void f(int, int);				3
+void f(double, double = 3.14);	4
+
+a)
+f(2.56, 42);
+
+// viable functions: 3, 4
+// call is ambiguous, because the first argument is an exact match for f(double, double), requires conversion for f(int, int), but the second argument is an exact match for f(int, int), and for f(double, double), it requires a conversion
+// illegal
+
+b)
+f(42);
+
+// viable functions: 2, 4
+// best match: 2 (4 requires a conversion)
+
+c)
+f(42, 0);
+
+// viable functions: 3, 4
+// best match: 3
+
+d)
+f(2.56, 3.14);
+
+// viable functions: 3, 4
+// best match: 4

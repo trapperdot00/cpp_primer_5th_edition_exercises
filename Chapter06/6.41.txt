@@ -1,0 +1,17 @@
+char *init(int ht, int wd = 80, char bckgrnd = ' ');
+
+a)
+init();
+
+// illegal: value for ht not provided
+
+b)
+init(24,10);
+
+// legal: calls init(24, 10, ' ')
+
+c)
+init(14, '*');
+
+// legal: converts '*' to an int, which is likely not what the user intended to do
+// calls init(14, static_cast<int>('*'), ' ')

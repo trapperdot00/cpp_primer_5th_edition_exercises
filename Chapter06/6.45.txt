@@ -1,0 +1,42 @@
+6.10:
+void swap(int *i, int *j) {
+	int temp = *i;
+	*i = *j;
+	*j = temp;
+}
+
+6.11:
+void reset(int &i) {
+	i = 0;
+}
+
+6.12:
+void swap(int &i, int &j) {
+	int temp = i;
+	i = j;
+	j = temp;
+}
+
+6.17:
+bool hasCapital(const string &s) {
+	for (const char &c : s) {
+		if (isupper(c))
+			return true;
+	}
+	return false;
+}
+
+void toLowercase(string &s) {
+	for (char &c : s)
+		c = tolower(c);
+}
+
+6.22:
+void swapP(int **p1, int **p2) {
+	int *temp = *p1;
+	*p1 = *p2;
+	*p2 = *temp;
+}
+
+6.23:
+

@@ -1,0 +1,10 @@
+int &get(int *arry, int index) { return arry[index]; }
+int main() {
+	int ia[10];
+	for (int i = 0; i != 10; ++i)
+		get(ia, i) = i;
+}
+
+// legal : assigns 0 to 9 to the elements of the array in sequence
+// get function returns a reference to the nth element of the array
+// since the function returns an lvalue (plain reference), you can assign to it 

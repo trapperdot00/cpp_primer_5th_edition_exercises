@@ -1,0 +1,8 @@
+string s;
+while (cin >> s && s != sought) { }	// empty body
+assert(cin);
+
+// the loop reads the standard input word for word, reading into s, until end of file, or illegal input happens, or the inputted string is the same as sought
+// assert terminates the program if the input was invalid, or end of file
+// the program doesn't terminate only if the inputted string was the same as sought
+// when NDEBUG (NOT DEBUG) is defined, the assert gets skipped

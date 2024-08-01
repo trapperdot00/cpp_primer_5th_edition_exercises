@@ -1,0 +1,41 @@
+a)
+int f() {
+	string s;
+	// ...
+	return s;
+}
+
+// return type doesn't match
+
+fix:
+
+string f() {
+	string s;
+	// ...
+	return s;
+}
+
+b)
+f2(int i) { /*	*/ }
+
+// no return type specified
+
+fix:
+
+void f2(int i) { /*	*/ }
+
+c)
+int calc(int v1, int v1) /**/ }
+
+// no two parameters can have the same name; curly brace has no start
+
+fix:
+int calc(int v1, int v2) { /*	*/ }
+
+d)
+double square(double x) return x * x;
+
+// missing statement block
+
+fix:
+double square(double x) { return x * x; }

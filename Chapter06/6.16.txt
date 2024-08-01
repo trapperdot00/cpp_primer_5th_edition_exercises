@@ -1,0 +1,7 @@
+bool is_empty(string& s) { return s.empty(); }
+
+// on string literals, coders won't be able to call this function, and on any const strings
+
+fix:
+
+bool is_empty(const string& s) { return s.empty(); }

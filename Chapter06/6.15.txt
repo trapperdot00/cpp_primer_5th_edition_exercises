@@ -1,0 +1,6 @@
+s is a reference type to const in the parameter, to avoid copying large strings, because it would be slow, and const because we don't mean to change its value
+occurs is a plain reference, so as to allow changing the argument from inside the function
+char is not a reference, because 1 byte of copying doesn't make much difference in the program's performance
+
+if we made s a plain reference, nonconst, then we would be able to modify s from inside the function, but since the function only reads s, we make it const
+if we made occurs a reference to const, then we wouldn't be able to change the argument, which signals how many times c occurs in the string s

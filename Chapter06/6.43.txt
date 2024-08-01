@@ -1,0 +1,11 @@
+a)
+inline bool eq(const BigInt&, const BigInt&) {...}
+
+// this goes into a header file, because definitions of constexpr and inline functions must match exactly.
+// constexpr and inline functions get expanded into the program line
+
+b)
+void putValues(int *arr, int size);
+
+// this also goes into a header file: it is a declaration, not a definition
+// definition goes into a source file

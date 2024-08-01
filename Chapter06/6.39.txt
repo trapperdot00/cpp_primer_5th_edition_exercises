@@ -1,0 +1,17 @@
+a)
+int calc(int, int);
+int calc(const int, const int);
+
+// error: redefinition, top level consts are ignored
+
+b)
+int get();
+double get();
+
+// error: parameter list the same, can't differentiate which function to call
+
+c)
+int *reset(int *);
+double *reset(double *);
+
+// legal

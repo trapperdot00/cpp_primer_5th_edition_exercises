@@ -1,0 +1,8 @@
+void f(T)
+	the argument gets copied into the parameter
+	you can't change the argument from inside the function, only the local, parameter
+	
+void f(T&)
+	the parameter refers to the argument
+	you can change the argument from the function
+	

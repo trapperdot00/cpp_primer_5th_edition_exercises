@@ -1,0 +1,23 @@
+parameter:
+	a local variable initialized with arguments when calling the function
+	initialized when execution passes through, each call
+	its value depends on the inputted arguments, controllable from the outside
+	destroyed when function ends
+	
+	for example a function that returns the absolute value of the inputted argument
+
+local variable:
+	a variable defined inside a function, that is local to that function
+	its value may always be the same, uncontrollable from the outside
+	hide declarations of the same name made in the outer scope
+	initialized when execution passes through, each call
+	destroyed when function ends
+
+	for example the return value inside the absolute value function
+
+local static variable:
+	a variable defined inside a function whose lifetime continues across calls to the function
+	initialized only once, before the first time execution passes through its definition
+	destroyed when the program terminates
+
+	for example a value that counts how many times this function has been called

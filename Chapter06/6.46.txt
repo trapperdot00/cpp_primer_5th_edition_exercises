@@ -1,0 +1,1 @@
+isShorter can't be a constexpr function because the parameters aren't literal types

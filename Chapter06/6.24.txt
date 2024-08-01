@@ -1,0 +1,25 @@
+void print(const int ia[10])
+{
+	for (size_t i = 0; i != 10; ++1)
+		cout << ia[i] << endl;
+}
+
+// the compiler doesn't care about the dimension of the array in the function's parameter list, sees it as int *ia
+// this enables all kinds of pointers to const int to be able to call this function, not caring about it's sizes
+fix 1:
+
+void print(const int ia[10], size_t size) {
+	for (size_t i = 0; i != size; ++i)
+		cout << ia[i] << endl;
+}
+
+// in this fix we will trust the user that they input the correct size for their arrays
+
+fix 2:
+
+void print(const int (&ia)[10]) {
+	for (const int &i : ia)
+		cout << i << endl;
+}
+
+// this is even better: can only call function on an array of size 10

@@ -1,0 +1,1 @@
+the difference between a parameter and an argument is that an argument is an initializer for the function's parameter, while the parameter is the blueprint in the function's header that signals how many arguments need to be supplied when calling that function
