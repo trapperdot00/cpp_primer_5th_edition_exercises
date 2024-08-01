@@ -1,0 +1,3 @@
+vector<vector<int>> ivec;	// creates a vector with no elements, of type int
+vector<string> svec = ivec;	// error: the two vectors' type doesn't match
+vector<string> svec(10, "null");	// creates a vector of strings, with an element count of 10, each element contains the value "null"

@@ -1,0 +1,6 @@
+constexpr size_t array_size = 10;
+int ia[array_size];
+for (size_t ix = 1; ix <= array_size; ++ix)
+	ia[ix] = ix;
+
+// array subscripts start at 0 and end at size-1: the program doesn't assign a value to the first (0) element and goes out of range trying to assign an element to the eleventh element (10)

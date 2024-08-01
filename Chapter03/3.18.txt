@@ -1,0 +1,3 @@
+vector<int> ivec;
+//ivec[0] = 42;	// illegal: undefined behavior when subscripting is out of range (vector is empty)
+ivec.push_back(42); // modified

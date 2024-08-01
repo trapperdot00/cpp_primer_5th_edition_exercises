@@ -1,0 +1,4 @@
+const string s = "Keep out!";
+for (auto &c : s) { /*	*/ }
+
+// c is a const char, code is legal, can't change the value of c

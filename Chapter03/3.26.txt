@@ -1,0 +1,1 @@
+because "mid = (beg + end) / 2;" is invalid: you can't add two iterators together, instead you have to write "mid = beg + (end - beg)", because you can add an iterator and any integral value (difference_type in this example, that returns the number you have to add to the right hand operand to get the left hand operand, which can be negative, so it is a signed value)

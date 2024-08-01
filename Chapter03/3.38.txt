@@ -1,0 +1,1 @@
+since pointers hold memory addresses, it would be nonsense to try to add two together

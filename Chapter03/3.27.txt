@@ -1,0 +1,6 @@
+unsigned buf_size = 1024;
+
+int ia[buf_size];	// illegal: dimension parameter not const expression
+int ia[4 * 7 - 14];	// legal: dimension const expression
+int ia[txt_size()];	// legal if txt_size is a constexpr function
+char st[11] = "fundamental";	// illegal: no space for null-terminator

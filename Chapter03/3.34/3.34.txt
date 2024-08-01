@@ -1,0 +1,3 @@
+p1 is incremented with the value needed to increment p1 to get p2
+if p1 points to the beginning of an array and p2 points to one after the end of it, p1 points to the same location as p2
+if p1 points to the end of the array, and p2 points to the beginning, p1 points to the beginning of the array, p1 points to the  same location as p2

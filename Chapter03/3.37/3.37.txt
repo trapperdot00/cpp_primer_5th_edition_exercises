@@ -1,0 +1,8 @@
+const char ca[] = {'h', 'e', 'l', 'l', 'o'};	// error: C-style character string not null terminated!!
+const char *cp = ca;	// cp points to the first element in the array, same as ca
+while (*cp) {	// while the value of the character is not null
+	cout << *cp << endl;	// print out the current character pointed to by the pointer
+	++cp;	// move the pointer to the next element in the array
+}
+
+// this code is invalid, because the character array is not null-terminated, and therefore the while loop will not terminate at the end of the array, will terminate at the first occurence of a null-character in the memory

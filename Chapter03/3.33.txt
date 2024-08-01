@@ -1,0 +1,1 @@
+we would have gotten undefined values instead of zeros in our array, and that's not what we want. we want zeroes.

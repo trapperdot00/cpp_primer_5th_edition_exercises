@@ -1,0 +1,9 @@
+string sa[10];	// each string initialized to an empty string
+int ia[10];	// each int's value is 0 because it is outside of any functions
+
+int main() {
+	string sa2[10];	// each string is an empty string
+	int ia2[10];	// each int's value is undefined: inside a function
+
+
+}

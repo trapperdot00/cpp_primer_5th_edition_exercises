@@ -1,0 +1,1 @@
+the string input operator reads until the first whitespace character, the getline operator reads until the first newline character
