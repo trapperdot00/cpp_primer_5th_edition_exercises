@@ -1,0 +1,18 @@
+char cval;
+int ival;
+unsigned int ui;
+float fval;
+double dval;
+
+cval = 'a' + 3;
+// 'a' character literal is promoted to int for the addition, the sum is converted to char
+
+fval = ui - ival * 1.0;
+// ival is converted to double for the multiplication, ui is converted to double, the right-hand value after all operations that has type double, converts to float in the assignment
+
+dval = ui * fval;
+// ui converts to float for the multiplication, product converts to double for the assignment
+
+cval = ival + fval + dval;
+// ival converts to float, sum converts to double, right-hand side converts to char for the assignment
+

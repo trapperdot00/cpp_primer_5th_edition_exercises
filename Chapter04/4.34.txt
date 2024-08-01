@@ -1,0 +1,9 @@
+if (fval)
+// float converts to bool in condition
+
+dval = fval + ival;
+// ival converts to float, then float converts to double in assignment
+
+dval + ival * cval;
+// cval promoted to int, then the product is converted to double in the assignment
+

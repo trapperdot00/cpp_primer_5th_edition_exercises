@@ -1,0 +1,13 @@
+if (p = getPtr() != 0)
+
+// because of assignments' low precedence, this condition first evaluates "getPtr() != 0", and then assigns the bool to p
+correction:
+if ((p = getPtr()) != 0)
+
+
+if (i = 1024)
+
+// assigns 1024 to i, doesn't check if i is 1024
+correction:
+if (i == 1024)
+

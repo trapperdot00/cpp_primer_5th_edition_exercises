@@ -1,0 +1,10 @@
+string s = "word";
+string p1 = s + s[s.size() - 1] == 's' ? "" : "s" ;
+
+// fails because adds the last character to the already existing string, and compares that string to a character
+correction:
+
+string p1 = s + (s[s.size() - 1] == 's' ? "" : "s");
+
+// this way it pluralizes the string
+// the predecence of the add operator is higher than the conditional's

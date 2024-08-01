@@ -1,0 +1,3 @@
+double slope = static_cast<double>(j/i);
+
+// the casting takes place after evaluating i / j, both as ints, the double value that gets assigned to slope will always have only zeroes after the decimal point

@@ -1,0 +1,6 @@
+unsigned long ul1 = 3, ul2 = 7;
+// 3: 011	7: 111
+ul1 & ul2	// 11 : 3
+ul1 | ul2	// 111: 7
+ul1 && ul2	// true, both nonzero
+ul1 || ul2	// true, either nonzero

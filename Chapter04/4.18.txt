@@ -1,0 +1,1 @@
+it would miss the first element when printing, and would try to print the element one-past the end, resulting in undefined behaviour

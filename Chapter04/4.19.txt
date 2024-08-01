@@ -1,0 +1,28 @@
+vec is a vector<int>|
+ptr is an int*		|
+ival is an int		|
+--------------------/
+
+ptr != 0 && *ptr++
+
+// the first expression checks whether the pointer is not a nullpointer, and if it isn't, increments the pointer, and dereferences the unincremented (previous) value
+// we don't know whether the pointer points to a valid memory location
+// the nullchecking could be changed to an expression where only the pointer stands
+correction:
+	ptr && *ptr++
+
+-------------------
+
+ival++ && ival
+
+// the first expression increments ival and checks whether the unincremented (previous) value was nonzero, if yes, then the second expression checks whether the incremented value is nonzero
+
+-------------------
+vec[ival++] <= vec[ival]
+
+// undefined behaviour: ival used in both sides and one side changes its value, order of evaluation is undefined
+correction:
+vec[ival] <= vec[ival + 1]
+++vec;
+
+-------------------

@@ -1,0 +1,6 @@
+if (42 = i) 
+// illegal: can't assign to rvalue
+
+if (i = 42)
+// legal: assigns 42 to i and condition returns false if the number assigned is zero, else true
+

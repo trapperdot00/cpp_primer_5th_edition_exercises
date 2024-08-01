@@ -1,0 +1,19 @@
+iter is a vector<string>::iterator
+
+*iter++;
+// legal: increments iter and dereferences the unincremented value (previous)
+
+(*iter)++;
+// illegal: dereferences iter then tries to increment the string it is pointing to, but you can't increment a string by one
+
+*iter.empty();
+// illegal: tries to call empty member on the iterator
+
+iter->empty();
+// legal: dereferences iter and calls the empty member on the string
+
+++*iter;
+// illegal: dereferences iter and tries to increment the string
+
+iter++->empty();
+// legal: increments iter, and calls the empty member on the unincremented iter's string that it points to

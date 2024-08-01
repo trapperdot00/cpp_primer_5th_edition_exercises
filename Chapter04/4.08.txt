@@ -1,0 +1,8 @@
+logical AND (&&):
+	right-hand operand only evaluated if the left-hand operand is true
+
+logical OR (||):
+	right-hand operand only evaluated if the left-hand operand is false
+
+equality operators (<;<=;==;>=;>):
+	the order of evaluation is undefined, it evaluates both sides of the operands no matter the value

@@ -1,0 +1,7 @@
+overflow is when you reach the maximum value a variable can hold, and try to force a bigger value into it than it can hold. it is undefined behaviour
+
+char c = 101010101011044
+short s = 7282748392748
+int i = 292829292929292929292
+
+unsigned integers have defined overflow values, they wrap around, meaning if you try to decrement 0 as an unsigned, you get the maximum value

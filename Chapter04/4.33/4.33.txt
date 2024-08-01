@@ -1,0 +1,9 @@
+someValue ? ++x, ++y : --x, --y
+
+(someValue ? ++x, ++y : --x), --y
+
+what the sigma
+
+// if someValue is true, increments x by one, and y by one, but decrements y by one after the conditional, because it is not in its else branch
+// if it is false, decrements both x and y by one, the '--y' gets evaluated regardless of the trueness of someValue
+// returns y after the decrement

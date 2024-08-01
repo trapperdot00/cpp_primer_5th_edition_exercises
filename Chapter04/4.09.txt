@@ -1,0 +1,4 @@
+const char *cp = "Hello World";
+if (cp && *cp) { }
+
+the condition first evaluates the left operand, checks whether the value of the pointer is not null. if this evaluates to true, only then it checks the right operand, checks whether the first element in the string pointed to by the pointer is not null. if both operands return true, the condition is true, else it is false.

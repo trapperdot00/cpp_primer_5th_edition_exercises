@@ -1,0 +1,6 @@
+i is an int
+d is a double
+
+i *= d so that it does integral, rather than floating point multiplication
+
+i *= static_cast<int>(d)

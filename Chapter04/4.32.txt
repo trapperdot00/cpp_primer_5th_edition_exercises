@@ -1,0 +1,9 @@
+constexpr int size = 5;
+int ia[size] = {1,2,3,4,5};
+for (int *ptr = ia, ix = 0;
+	ix != size && ptr != ia+size;
+	++ix, ++ptr) {}
+
+// the loop initializes an int* to the arrays first element, and an int to 0
+// the array ends either when the int reaches the arrays size, or when the pointer reaches the off-the-end element of the array
+//  on each iteration the pointer and the int var gets incremented by one

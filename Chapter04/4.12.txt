@@ -1,0 +1,3 @@
+i != j < k
+
+first it evaluates the first expression, "i != k", and returns a bool value based on i and j are equal or not, if they are, it returns false, otherwise false. then it takes this returned bool and places it into "j < k" as the left-hand operand, compares whether k is greater than 0(false) or true(1)

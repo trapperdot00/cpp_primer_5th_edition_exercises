@@ -1,0 +1,9 @@
+int i;
+double d;
+
+d = i = 3.5;
+// i is 3; d is 3.0
+
+i = d = 3.5;
+// d is 3.5; i is 3
+

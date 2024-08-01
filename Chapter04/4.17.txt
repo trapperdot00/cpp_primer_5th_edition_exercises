@@ -1,0 +1,1 @@
+the difference between prefix and postfix increment is that prefix incrementing returns the changed value, whereas the postfix incrementing returns the copy of the value before incrementing
