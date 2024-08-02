@@ -1,0 +1,10 @@
+not making the StrBlob constructor that takes an initializer_list<string> explicit
+
+pros:
+	can call functions that take an StrBlob with an initializer_list<string>
+	compiler will use initializer_list<string> in an automatic conversion to StrBlob
+	can use the copy form of initialization ( StrBlob s = {"asdasds", "asdad"}; )
+
+cons:
+	harder to debug if there are any errors
+	overloaded functions could implicitly convert initializer_list<string> to StrBlob

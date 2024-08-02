@@ -1,0 +1,5 @@
+std::string &deref() const {
+	return (*check(curr, "dereference past end"))[curr];
+}
+
+i think the original version is more easily readable

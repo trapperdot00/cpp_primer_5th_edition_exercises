@@ -1,0 +1,3 @@
+unique_ptr has a release member to allow assigning the pointed memory location to another unique_ptr
+
+shared_ptr doesn't have one, because you can freely copy and assign a shared_ptr into another one

@@ -1,0 +1,13 @@
+StrBlob b1;
+{
+	StrBlob b2 = {"a", "an", "the"};
+	b1 = b2;
+	b2.push_back("about");
+}
+
+how many elements do b1 and b2 have 
+here
+^
+
+// b1.size() is 4, because b2 and b1 used a shared_ptr, both managed the same vector<string>
+// b2 doesn't exist anymore, but b1 does, and the shared_ptr<vector<string>> is still alive, has one user: b1

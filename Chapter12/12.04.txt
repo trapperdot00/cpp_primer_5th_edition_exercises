@@ -1,0 +1,1 @@
+because StrBlob::size_type (vector<string>::size_type) is unsigned, can never be negative, no point in checking if it is negative

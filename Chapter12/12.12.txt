@@ -1,0 +1,14 @@
+auto p = new int();	// int *, dynamically allocates a value initialized int, value is 0
+auto sp = make_shared<int>();	// shared_ptr<int>, dyn. allocated value initialized int, 0 val
+
+process(sp);
+// legal, increments value of reference count by one in the function call, decrements it back to the original value after function ends
+
+process(new int());
+// error: the constructor that takes a pointer to construct a shared_ptr is explicit: no implicit conversion from pointer type to shared_ptr type
+
+process(p);
+// error : same as before
+
+process(shared_ptr<int>(p));
+// warning: after this expression, the data pointed by p is deleted/freed! we can't access the data pointed by p after this statement, nor delete, because it would be deleted twice then, undefined

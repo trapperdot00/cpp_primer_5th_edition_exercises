@@ -1,0 +1,5 @@
+auto sp = make_shared<int>();	// dynamically allocates a value-initialized int on the heap, value is 0
+auto p = sp.get();
+delete p;
+
+// when sp is destroyed, the pointed data is deleted a second time, which is undefined

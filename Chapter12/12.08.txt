@@ -1,0 +1,7 @@
+bool b() {
+	int *p = new int;
+	// ...
+	return p;
+}
+
+// error: function returns bool, pointer that is 'returned' gets converted to bool, new dynamically allocated int on the heap is lost, memory leak, unless delete is used on the pointer before the return!!!

@@ -1,0 +1,5 @@
+int *pa = new int[10];
+
+to delete pa:
+
+delete[] pa;

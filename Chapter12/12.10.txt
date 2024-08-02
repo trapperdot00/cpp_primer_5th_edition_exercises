@@ -1,0 +1,14 @@
+void process(shared_ptr<int> p) {
+	// use p
+}
+
+shared_ptr<int> p(new int(42));
+process(shared_ptr<int>(p.get()));
+
+// error: temporary shared_ptr is destroyed after the call to process, destroys p's value, after calling delete on the pointed data, if p is destroyed, the data is destroyed twice, which is undefined
+
+fix:
+
+process(p);
+or 
+process(shared_ptr<int>(p));

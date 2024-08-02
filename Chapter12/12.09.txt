@@ -1,0 +1,7 @@
+int *q = new int(42), *r = new int(100);	// allocate two ints dynamically on the heap
+r = q;	// congrats, you've lost access to the int pointed by r
+// dynamic memory pointed by r wasn't freed with delete, memory leak
+
+auto q2 = make_shared<int>(42), r2 = make_shared<int>(100);	// allocate two ints dynamically on the heap with a shared_ptr
+r2 = q2;	// int pointed by r2, a shared_ptr<int> is freed, because its usercount decreases to 0, no memory leaks
+// int pointed by q2 now has two users

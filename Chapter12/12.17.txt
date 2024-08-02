@@ -1,0 +1,14 @@
+int ix = 1024, *pi = &ix, *pi2 = new int(2048);
+typedef unique_ptr<int> IntP;
+
+IntP p0(ix);	// error: not pointer type supplied
+
+IntP p1(pi);	// error: when p1 is destroyed, attempts to delete ix, which is not dynamically allocated
+
+IntP p2(pi2);	// legal, p2 points to where pi2 points, a dynamically allocated int, will cause a dangling pointer when destroyed
+
+IntP p3(&ix);	// error: p3 will try to destroy ix when p3 is destroyed
+
+IntP p4(new int(2048));	// legal, RECOMMENDED
+
+IntP p5(p2.get());	// error: double deletion: p2 and p5 will delete the dynamically allocated int, which is undefined

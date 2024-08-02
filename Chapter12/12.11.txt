@@ -1,0 +1,3 @@
+process(shared_ptr<int>(p.get()));
+
+creates a new shared_ptr, won't increment the reference counter in p, and when the expression ends, the data in p is destroyed, error: when p is destroyed the data is destroyed again which is undefined
