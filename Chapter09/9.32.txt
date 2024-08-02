@@ -1,0 +1,1 @@
+no, because the compiler can evaluate any of the operands in a random order

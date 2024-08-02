@@ -1,0 +1,4 @@
+if elem1 and elem2 iterators are supplied as a range to erase a container's elements, and they have the same value, nothing happens, because it deletes from the first iterator to the element before the second
+
+if elem2 is an off-the-end iterator, all elements from elem1 to elem2 will be erased
+if both are off-the-end iterators, nothing happens

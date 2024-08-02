@@ -1,0 +1,2 @@
+if vec holds 25 elements, vec.resize(100) inserts 75 value initialized elements to the back of the vector
+if we next wrote vec.resize(10), then the excess elements on the back would get deleted, and the first 10 elements would remain in the container

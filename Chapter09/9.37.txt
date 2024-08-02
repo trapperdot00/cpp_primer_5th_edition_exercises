@@ -1,0 +1,3 @@
+list doesn't have a capacity member, because it doesn't store its elements contiguously in memory: their elements don't support fast random access via subscripts, using pointer math.
+
+array doesn't have a capacity member because its size is a constant value, won't ever change

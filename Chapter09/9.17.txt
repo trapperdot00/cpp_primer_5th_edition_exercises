@@ -1,0 +1,5 @@
+if (c1 < c2)
+
+//
+the two containers must be the same types: vector<int> == vector<int>; vector<int> != list<int>;
+the elements' types in the vector must have the < operator defined

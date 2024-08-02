@@ -1,0 +1,7 @@
+iter = vi.begin();
+while (iter != vi.end())
+	if (*iter % 2)
+		iter = vi.insert(iter, *iter);
+	++iter
+
+// error: infinite loop: iter not incremented in the loop, ++iter is outside the while loop, if the first element is odd, then the loop will insert the first element before it infinitely, iterator will always point to the inserted new element

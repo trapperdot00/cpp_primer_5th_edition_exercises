@@ -1,0 +1,1 @@
+c.resize(n) can't insert elements of types that don't have default constructors

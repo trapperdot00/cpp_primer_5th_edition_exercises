@@ -1,0 +1,5 @@
+if the program in the previous exercise reads 256 words, its size after the program completes, is 384, and its capacity is equal to or more than 1024
+
+if it reads 512, its capacity is >= to 1024
+1000: capacity >= 1500
+1048: capacity >= 1572

@@ -1,0 +1,2 @@
+the iterators must denote elements or a one past the end of element in the same container
+the end member must be reached by repeatedly incrementing begin

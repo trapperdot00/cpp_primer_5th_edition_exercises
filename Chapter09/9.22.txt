@@ -1,0 +1,17 @@
+vector<int>::iterator iter = iv.begin(), mid = iv.begin() + iv.size()/2;
+while (iter !- mid)
+	if (*iter == some_val)
+		iv.insert(iter, 2 * some_val);
+
+// iter's value never incremented, the loop will never fail
+
+fix:
+
+vector<int>::iterator iter = iv.begin(), mid = iv.begin() + iv.size()/2;
+while (iter != mid) {
+	if (*iter == some_val) {
+		iter = iv.insert(iter, 2 * some_val);	// we assign the returned value from the insert because adding element to a vector (and string or deque) can invalidate existing pointers
+		++iter;	// increment iterator, iter points to the original value now, before this it points to the new value
+	}
+	++iter;	// increment again, iter points to the next element
+}

@@ -1,0 +1,7 @@
+vector<string> vec;
+vector<string>::iterator iter = vec.begin();
+while (cin >> word)
+	iter = vec.insert(iter, word);
+
+// vector only guarantees that inserting or deleting elements from the back is fast, so this loop could be slow based on the size of the vector
+// list guarantees that inserting or deleting elements to any location is fast

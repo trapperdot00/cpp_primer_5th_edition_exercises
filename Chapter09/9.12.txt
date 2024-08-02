@@ -1,0 +1,2 @@
+the difference between a container constructor that takes a container to copy and a constructor that takes an iterator range is that the first constructor's argument needs to be the exact same type of the object, while an iterator range can convert each element to the object's type, if a conversion exists between the types.
+the first constructor copies the whole container into the other, while with an iterator range, you can select the range to copy

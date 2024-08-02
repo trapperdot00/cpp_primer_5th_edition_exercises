@@ -1,0 +1,5 @@
+if i know that i need at least 100 characters of capacity in a string, i would use the reverse member function in a string, to preallocate at least 100 characters:
+
+s.reserve(500);
+
+i guess 500 characters will be enough
