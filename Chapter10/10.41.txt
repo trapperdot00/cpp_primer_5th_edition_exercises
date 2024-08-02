@@ -1,0 +1,11 @@
+replace(beg, end, old_val, new_val);
+	// replaces the elements in the input range that have the value of old_val, with new_val
+
+replace_if(beg, end, pred, new_val);
+	// replaces elements in the input range that the predicate returns a nonzero value for, with new_val
+
+replace_copy(beg, end, dest, old_val, new_val);
+	// copies the elements from the input range, after the replacement of the values happened, the input doesn't get changed
+
+replace_copy_if(beg, end, dest, pred, new_val);
+	// same as before, but now replaces elements that the predicate is true

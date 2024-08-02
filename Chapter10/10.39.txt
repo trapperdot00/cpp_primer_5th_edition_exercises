@@ -1,0 +1,3 @@
+list has a bidirectional iterator (elements are not stored sequentially in memory to allow fast random access with iterator arithmetics)
+
+vector has a random-access iterator

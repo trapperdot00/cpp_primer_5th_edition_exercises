@@ -1,0 +1,1 @@
+algorithms don't change the size of containers because they work on iterators, not the containers themselves, they don't have access to the insert or erase functions

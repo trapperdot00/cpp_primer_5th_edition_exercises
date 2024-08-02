@@ -1,0 +1,1 @@
+algorithms really don't change the sizes of the containers on which theu operate, back_inserter() is defined inside the iterator header

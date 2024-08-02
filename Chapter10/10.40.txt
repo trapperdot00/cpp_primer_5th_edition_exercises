@@ -1,0 +1,4 @@
+copy requires two input iterators, and a third output iterator
+
+reverse requires two bidirectional iterators
+unique requires two forward iterators

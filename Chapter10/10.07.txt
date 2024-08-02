@@ -1,0 +1,20 @@
+a)
+vector<int> vec;
+list<int> lst;
+int i;
+while (cin >> i)
+	lst.push_back(i);
+copy(lst.cbegin(), lst.cend(), vec.begin());	// error: vector doesn't have at least as many elements as the list
+
+fix:
+
+copy(lst.cbegin(), lst.cend(), back_inserter(vec));	// inserts list's contents to the back of the vector instead of trying to overwrite the nonexistent element of the vector
+
+b)
+vector<int> vec;
+vec.reserve(10);
+fill_n(vec.begin(), 10, 0);	// error: vector doesn't have at least 10 element, only reserved 10 elements
+
+fix:
+
+fill_n(back_inserter(vec), 10, 0);

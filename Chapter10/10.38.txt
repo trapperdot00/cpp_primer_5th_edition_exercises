@@ -1,0 +1,11 @@
+the five types of iterators and their operations:
+
+input iterator			++it; it++; *it (on the rhs of assigment); it1 == it2; it1 != it2; it->call
+
+output iterator			++it; it++; *it (on the left hand side of assignment)
+
+forward iterator		++it; it++; *it; it1 == it2; it != it2; it->call;
+
+bidirectional iterator	++it; it++; --it; it--; *it; it1 == it2; it1 != it2; it->call
+
+random-access iterator	++it; it++; --it; it--; *it; it1 == it2; it1 != it2; it->call; it += n; it -= n; it + n; it - n; it1 - it2; it1 < it2; it1 > it2; it1 <= it2; it1 >= it2; it[n] *(it + n)

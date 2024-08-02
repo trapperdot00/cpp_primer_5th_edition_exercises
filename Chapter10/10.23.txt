@@ -1,0 +1,1 @@
+bind takes the original function as an argument, the original argument as a second one, and the third for the user supplied agr 

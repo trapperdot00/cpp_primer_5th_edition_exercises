@@ -1,0 +1,3 @@
+back_inserter() creates an iterator that when assigned to, calls push_back() on the container it is bound to
+front_inserter() does the opposite: it calls push_front() when assigned to it
+inserter() takes an initial iterator as a position to insert elements when assigned to
