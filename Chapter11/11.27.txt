@@ -1,0 +1,2 @@
+c.count():	when we need to iterate through all items with the same keys in a multimap/multiset
+c.find():	when we need to know whether there is an element in a map with a given key

@@ -1,0 +1,5 @@
+map vs vector:
+
+a map contains unique keys, each with an associated value, subscriptable with the key's value, returns the value in its value pair
+
+a vector contains elements of any type, subscripting is done via an integer, the elements don't need to be unique

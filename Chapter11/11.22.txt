@@ -1,0 +1,4 @@
+map<string, vector<int>> m;
+
+m.insert(arg);	// arg is a pair<string, vector<int>>
+	// returns a pair<map<string, vector<int>>::iterator, bool>, whose first member is the mapped pair whose key is the same as the inserted one, the second member is a bool indicating whether the insertion happened, returns false if there was already a map to that given key, true if insertion happened because there wasn't a pair mapped to that key

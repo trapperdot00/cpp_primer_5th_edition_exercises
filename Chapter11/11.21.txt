@@ -1,0 +1,9 @@
+map<string, size_t> word_count;
+string word;
+
+while (cin >> word)
+	++word_count.insert({word, 0}).first->second;
+
+// word_count.insert({word, 0})	returns a pair<map<string, size_t>::iterator, bool>, the first member fetch ignores that the insert succeeded or not, it gets the second member of the map, and increments its value
+// if the insert succeeds, because there weren't any pairs in the map with the key of word, the value of the key word is 1 after the statement
+// if the insert doesn't succeed, the key's value gets incremented by one after the statement

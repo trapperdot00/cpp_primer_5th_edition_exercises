@@ -1,0 +1,1 @@
+if there were a key, one space, and then the end of line in the rules file, the buildMap function would throw a runtime_error, because the value's size is not larger than 1

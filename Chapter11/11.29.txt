@@ -1,0 +1,3 @@
+upper_bound()	returns an iterator where an element with a given pair could be inserted when that key isn't in the associative container
+lower_bound()	same
+equal_range()	returns a pair, whose first element is the lower bound iterator, the second is the upper iterator, they form a range, if they are equal, there aren't any elements with the given key

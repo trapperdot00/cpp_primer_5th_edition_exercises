@@ -1,0 +1,4 @@
+vector<int> v;
+v[0] = 1;
+
+// error: v is empty, index of 0 is out of range, use an insert method

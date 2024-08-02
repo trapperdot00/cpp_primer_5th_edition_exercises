@@ -1,0 +1,2 @@
+if we used a subscript operator instead of the find member function, we would have gotten back the value, not an iterator to the pair element
+but if we changed somehow the program to function correctly with the subscript operator, the code would be in error, because there is a possibility that it inserts an element into the map, and the map is const in the function

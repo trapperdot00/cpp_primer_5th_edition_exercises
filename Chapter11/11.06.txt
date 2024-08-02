@@ -1,0 +1,3 @@
+list is a sequential container whose elements are accessible by their positions in the sequence, whereas the set's elements are stored based on a hash function.
+list is best used when insertion and deletion is needed, and the order of the elements matter
+set is best used when only the occurence of the elements is needed

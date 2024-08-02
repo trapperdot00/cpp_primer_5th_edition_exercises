@@ -1,0 +1,1 @@
+if there are repeating keys in the input, the subscript operator will put the last rule into the map, whereas the insert will put the first into the map

@@ -1,0 +1,6 @@
+map<int, int> m;
+m[0] = 1;
+
+// m[0] inserts a pair<int, int> into the empty map called m, with a value initialized (0) value
+// returns the value from the '0' key
+// 1 is assigned to the value

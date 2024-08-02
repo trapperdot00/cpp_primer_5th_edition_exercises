@@ -1,0 +1,6 @@
+a map can be subscripted with a map key_type
+the subscript operator returns a mapped_type
+
+map<string, int> m;
+int ret = m[string("a")];
+map<string, int>::mapped_type ret2 = m[map<string, int>::key_type("a")];

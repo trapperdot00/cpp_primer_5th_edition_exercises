@@ -1,0 +1,14 @@
+list
+	useful when fast insertion/deletion is needed anywhere in the container
+
+vector
+	useful when fast random-access is needed, and insertion/deletion is only needed at the end of the container
+
+deque
+	useful when fast random-access is needed, and insertion/deletion is only needed at the front or the end
+
+map
+	useful when a value needs to be associated with another value (key-value pair)
+
+set
+	useful when we only need to know about the presence of the values that it holds (collection of keys)

@@ -1,0 +1,6 @@
+for (auto pos = authors.equal_range(search_item); pos.first != pos.second; ++pos.first) {
+	cout << pos.first->second << endl;
+}
+
+pos.first->second
+	// pos.first is a map<t1, t2>::iterator, this statement gets the value from the current map element pair

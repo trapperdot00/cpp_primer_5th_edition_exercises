@@ -1,0 +1,8 @@
+unordered containers' advantages:
+	useful when there is no obvious ordering for the key types
+	useful when ordering elements is costly
+	its hash performance can be tuned
+
+ordered containers' advantages:
+	keeps elements in order
+	more friendly to use

@@ -1,0 +1,14 @@
+multiset<string> c;
+vector<string> v;
+
+copy(v.begin(), v.end(), inserter(c, c.end()));
+// legal
+
+copy(v.begin(), v.end(), back_inserter(c));
+// illegal: associative containers don't support the push_back or push_front operations
+
+copy(c.begin(), c.end(), inserter(v, v.end()));
+// legal
+
+copy(c.begin(), c.end(), back_inserter(v));
+// legal
