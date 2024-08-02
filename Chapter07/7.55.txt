@@ -1,0 +1,1 @@
+no because it doesn't have at least one constexpr constructor, and string is not a literal type

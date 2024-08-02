@@ -1,0 +1,1 @@
+no because it would be an ambiguous call for either constructor if we had provided no arguments for our initialization of type Sales_data

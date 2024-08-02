@@ -1,0 +1,1 @@
+it would be an error because the first step of compilation is sequential, the declarations are compiled first in the class, line by line, and there would be an undefined reference to pos in the functions' parameters and/or return types

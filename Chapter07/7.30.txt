@@ -1,0 +1,3 @@
+pros of using this pointer to refer to access members is that it will look clearer that it is a member, not a plain variable, and if we use a parameter that has the same name as a member, we can use the member through the this pointer
+
+con is that the code will look worse

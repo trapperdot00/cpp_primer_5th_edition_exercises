@@ -1,0 +1,5 @@
+Sales_data item = {"978-0590353403", 25, 15.99};
+
+// error: Sales_data has in-class initializers
+fix:
+Sales_data item("978-0599353403", 25, 15.99);

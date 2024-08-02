@@ -1,0 +1,6 @@
+Sales_data first_item(cin);		//	calls Sales_data(std::istream&)	-> bookNo, units_sold, revenue initialized from cin
+
+int main() {
+	Sales_data next;					// calls Sales_data(std::string s = ""), bookNo empty string, units_sold and revenue is 0
+	Sales_data last("9-999-99999-9");	// calls Sales_data(std::string s = ""), bookNo = "9-999-99999-9", units_sold and revenue 0
+}

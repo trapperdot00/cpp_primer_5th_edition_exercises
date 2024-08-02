@@ -1,0 +1,2 @@
+encapsulation is hiding a class' implementation from users
+this forces users to use the interfaces we provide with the class, and stops users from messing with the internals

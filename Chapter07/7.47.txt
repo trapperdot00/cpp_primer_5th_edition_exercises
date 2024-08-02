@@ -1,0 +1,4 @@
+it should be explicit, because we can only provide a bookNo with a string argument, and we don't want conversions taking place when using strings instead of Sales_data objects
+
+benefits:	won't be used in an automatic conversion
+drawbacks:	can't use copy form of initialization, need to use direct initialization

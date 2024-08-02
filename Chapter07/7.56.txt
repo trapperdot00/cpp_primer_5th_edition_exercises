@@ -1,0 +1,6 @@
+a static class member is a member that is not tied to an object of class type
+objects of class type don't contain the data associated with static members, they are associated with the type
+static member functions don't have a this pointer in their parameter lists -> they can't be declared const
+static data members can have an incomplete type, such as the same class it is in, not just as a pointer to it, or reference
+static members exist until the program completes
+we can use static members as default arguments in parameter lists inside member functions

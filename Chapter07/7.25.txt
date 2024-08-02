@@ -1,0 +1,1 @@
+Screen can safely rely on the default versions of copy and assignment, because string and the built-in data members can rely on the synthetized versions of initializations

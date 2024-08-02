@@ -1,0 +1,6 @@
+if (read(read(cin, data1), data2))
+
+1:	read(cin, data1)	returns cin
+2:	read(cin, data2)	if checks whether cin failed or not in the two readings
+
+

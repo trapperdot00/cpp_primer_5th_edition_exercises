@@ -1,0 +1,1 @@
+then it would be legal, because C has a default constructor

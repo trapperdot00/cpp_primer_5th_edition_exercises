@@ -1,0 +1,1 @@
+i would put the data members private, the getter functions public with the constructor and the print, read function

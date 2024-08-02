@@ -1,0 +1,11 @@
+A)
+Sales_data &combine(Sales_data);
+// s converted to a temporary Sales_data object, nothing happens to i, because the constructor that initializes a Sales_data from a string, initializes units_sold and revenue to 0
+
+B)
+Sales_data &combine(Sales_data&);
+// error: reference to temporary object
+
+C)
+Sales_data &combine(const Sales_data&) const;
+// error: return type is Sales_data&, but the function is const: has a const Sales_data *this pointer, and returns it, therefore the return type should be const Sales_data&, or the function shouldn't be const

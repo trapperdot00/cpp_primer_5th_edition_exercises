@@ -1,0 +1,2 @@
+read defines its Sales_data parameter as a plain reference because it needs write access to the data members of the Sales_data item
+print defines its Sales_data parameter as a reference to const, because it doesn't modify the data members of the Sales_data item

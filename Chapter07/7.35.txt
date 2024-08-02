@@ -1,0 +1,31 @@
+typedef string Type;
+Type initval();				// string
+class Exercise {
+public:
+	typedef double Type;	// error: cannot redefine a type name
+	Type setVal(Type);		// if line above weren't in error, it would use double as Type
+	Type initVal();			// double
+private:
+	int val;
+};
+Type Exercise::setVal(Type parm) {	// error: Type not in scope, needs scope operator
+	val = parm + initVal();			// member function called
+	return val;
+}
+
+fix:
+
+typedef string Type1;
+Type1 initVal();
+class Exercise {
+public:
+	typedef double Type2;
+	Type2 setVal(Type2);
+	Type2 initVal();
+private:
+	int val;
+};
+Exercise::Type2 Exercise::setVal(Type2 parm) {
+	val = parm + initVal();
+	return val;
+}

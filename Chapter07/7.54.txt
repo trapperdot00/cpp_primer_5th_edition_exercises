@@ -1,0 +1,1 @@
+no because constexpr functions can only contain return statements

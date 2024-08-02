@@ -1,0 +1,3 @@
+a is untrue: a class mustn't provide at least one constructor, if the class doesn't have one, the compiler will try to synthetize one for us
+b is untrue: a default constructor is a constructor that can be called with an empty argument list, only one for each class
+d is untrue: only if there aren't any constructors for the class, will then the compiler generate a synthetized constructor

@@ -1,0 +1,2 @@
+vector defines its single argument constructor explicit, because they don't want to be able to pass a vector to a function that has no values other than the default
+string doesn't define its constructor explicit, because it acts as a replacement to const char*

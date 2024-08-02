@@ -1,0 +1,2 @@
+friends are useful when we have a class that has private data members, and we need a nonmember function to access those members
+if the class changes, the friend may be needed to be rewritten too

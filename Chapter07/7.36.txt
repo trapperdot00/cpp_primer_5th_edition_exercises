@@ -1,0 +1,13 @@
+struct X {
+	X (int i, int j) : base(i), rem(base % j) {}
+	int rem, base;
+};
+
+// error : constructor initializer first initializes rem, then base, because rem's declaration is first in the class.
+
+fix:
+
+struct X {
+	X (int i, int j) : rem(i % j), base(i) {}
+	int rem, base;
+}

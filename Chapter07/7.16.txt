@@ -1,0 +1,3 @@
+there are no constraints on how many access specifiers we can have in a class, and they can be anywhere inside a class
+members of the interface should be after the public specifier
+members of the implementation should be put after the private specifier

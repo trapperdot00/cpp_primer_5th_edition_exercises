@@ -1,0 +1,17 @@
+// example.h
+class Example {
+public:
+	//static double rate = 6.5;	// error: nonconst static data members must be defined outside of class
+	static double rate;
+	static const int vecSize = 20;
+	// static vector<double> vec(vecSize); // same error, and can't use parentheses in initializer inside class
+};
+
+// example.C
+#include "example.h"
+// double Example::rate;
+//vector<double> Example::vec;
+
+double Example::rate = 6.5;
+const int Example::vecSize;
+vector<double> Example::vec(vecSize);

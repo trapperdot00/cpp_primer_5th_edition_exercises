@@ -1,0 +1,10 @@
+string null_isbn("9-999-99999-9");
+// const char* to string
+
+Sales_data item1(null_isbn);
+// string to Sales_data, calls Sales_data(const std::string&)
+
+Sales_data item2("9-999-99999-9");
+// const char* to string to Sales_data, calls Sales_data(const std::string&)
+
+explicitness for the constructor that takes a string, doesn't change the operations

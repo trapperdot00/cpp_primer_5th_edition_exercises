@@ -1,0 +1,3 @@
+vector<NoDefault> vec(10);
+
+// illegal: no default constructor for type NoDefault

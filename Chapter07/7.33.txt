@@ -1,0 +1,13 @@
+if we gave Screen a size member defined as this:
+
+pos Screen::size() const {
+	return height * width;
+}
+
+it would be in error, because the 'pos' type is defined inside the class, and it is seen first. we have to use the scope operator to point where this type is defined:
+
+Screen::pos Screen::size() const {
+	return height * width;
+}
+
+after specifying that this member function is in the scope of Screen, the data members or member functions in the parameter list, and the function body don't need the scope operator
