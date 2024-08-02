@@ -1,0 +1,24 @@
+when we copy a StrBlob:
+	the synthesized copy constructor is equal to:
+		StrBlob(const StrBlob& orig) {
+			data(orig.data);
+		}
+	the shared_ptr<std::vector<std::string>> gets copied from the source to our new object using the shared_ptr's copy constructor (both types are the same)
+	the data shared_ptr increases the use_count of the original shared_ptr
+
+when we copy a StrBlobPtr:
+	the synthesized copy constructor is equal to:
+		StrBlobPtr(const StrBlobPtr &orig) {
+			wptr(orig.wptr);
+			curr(orig.curr);
+		}
+	the weak_ptr<std::vector<std::string>> and the std::size_t gets copied from the original object into the new object, using their copy constructors
+	the weak_ptr doesn't increase the use count of the original pointer
+
+when we copy a ConstStrBlobPtr:
+	the synthesized copy constructor is equal to:
+		ConstStrBlobPtr(const ConstStrBlobPtr& orig) {
+			wptr(orig.wptr);
+			curr(orig.curr);
+		}
+	the same happens

@@ -1,0 +1,6 @@
+an rvalue reference can only be bound to an object that is bound to be destroyed, aka an rvalue
+	we can obtain an rvalue from an lvalue (such as a variable) using std::move(), defined in the utility header. after calling move on an lvalue, we can't use its value
+	we know that the referred to object is about to be destroyed and that there can't be any other users of that object
+
+an lvalue reference can only be bound to an lvalue (such as a variable), that has a persistent state
+	constant lvalue references can be bound to rvalues

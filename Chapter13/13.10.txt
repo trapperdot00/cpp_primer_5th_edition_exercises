@@ -1,0 +1,10 @@
+when a StrBlob is destroyed, the synthesized destructor looks something like this:
+	~StrBlob() {}
+	// the body has nothing to do, after the destructor body's execution, all nonstatic data members are destroyed implicitly
+	// this means that the destructor calls the data's destructor (shared_ptr), and decrements the use_count in the shared_ptr, if it reaches 0, the dynamically allocated vector of strings is also destroyed, the shared_ptr manages the destruction of the dynamic memory
+
+when a StrBlobPtr is destroyed, the synthesized destructor looks something like this:
+	~StrBlobPtr() {}
+	// no work to do in the destructor body, all members are destroyed implicitly
+	// wptr is destroyed, weak_ptr s don't contribute to reference counting
+	// curr (size_t) is destroyed

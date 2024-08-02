@@ -1,0 +1,16 @@
+hp = hp2;	// hp2 is an lvalue
+
+// calls HasPtr's copy-assignment operator, which has a nonreference parameter of HasPtr
+// rhs is initialized by the copy constructor, to contain the same value as hp2
+// rhs is swapped with hp, rhs contains hp's old value, hp contains rhs's old value
+// hp's value is returned, that is the same as hp2 or rhs before the swap
+// when rhs goes out of scope, its destructor is called, which frees hp's initial values
+
+
+hp = std::move(hp2);	// right hand side expression is an rvalue
+
+// calls HasPtr's copy-assignment operator, which has a nonreference parameter of HasPtr
+// rhs is initialized by the move constructor, hp2's value is now indeterminate
+// rhs is swapped with hp
+// hp returned
+// rhs goes out of scope, hp's old value is freed

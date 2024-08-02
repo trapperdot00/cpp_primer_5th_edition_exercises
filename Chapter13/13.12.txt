@@ -1,0 +1,10 @@
+// How many destructor calls occur in the following code fragment?
+
+bool fcn(const Sales_data *trans, Sales_data accum)
+{
+	Sales_data item1(*trans), item2(accum);
+	return item1.isbn() != item2.isbn();
+}
+
+// one for the Sales_data object in the parameter list, that is copied, it is destroyed when the function ends
+// two for item1 and item2 which are created inside the function, and are destroyed when the function ends, goes out of scope

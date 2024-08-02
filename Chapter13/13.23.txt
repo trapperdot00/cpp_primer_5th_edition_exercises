@@ -1,0 +1,1 @@
+my copy-assignment operator didn't handle self-assignment, i didn't store the right hand side's value into a local temporary, in case of the delete destroys the left-hand side's value as well as the right's

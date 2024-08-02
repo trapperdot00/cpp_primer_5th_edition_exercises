@@ -1,0 +1,4 @@
+Sales_data::Sales_data(Sales_data rhs);
+
+// this is illegal, because the copy constructor's parameter must be a reference type to the class type
+// if we were to call this, it would try to copy the argument into the constructor's parameter, calling rhs' copy constructor, that would also try to copy the argument to its parameter, and it would go on forever

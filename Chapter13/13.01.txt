@@ -1,0 +1,9 @@
+the copy constructor is a constructor that has parameter which is a reference (to usually const) to the current class' type, and if there are other parameters, they must have default values
+the copy constructor is used usually when copy initialization occurs, and when directly initializing a class object with another object in the arguments to the constructor
+
+it is used generally when
+	defining variables with =
+	passing an object as an argument to a parameter of nonreference type
+	returning an object from a function that has a nonreference type
+	brace initializing elements of an array or aggregate classes
+

@@ -1,0 +1,3 @@
+if numbered had a copy constructor that generates a unique serial number for the constructed object, then the output would be three non-identical number, because the synthesized copy-constructor copies all data members into the other, with our copy constructor, we could fine tune what to copy and what else to do inside the constructor
+
+our output won't be our three inputted objects' serial numbers, because the function takes a nonreference numbered object, which generates its own serial number for each call

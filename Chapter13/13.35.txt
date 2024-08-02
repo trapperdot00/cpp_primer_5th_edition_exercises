@@ -1,0 +1,7 @@
+If Message used the synthesized versions of the copy-control members,
+
+the copy constructor wouldn't add the new Message object to the Folders of the copied object, it would only copy the string and the set of Folder pointers, but no Folders would ever point to our new Message object
+
+the copy-assignment operator would only assign to the string and the set of Folder pointers, it wouldn't handle self-assignment correctly
+
+the destructor would only destroy our string and the set of Folder pointers in our Message class, it wouldn't remove the Message pointers from the Folders in which our Message was located

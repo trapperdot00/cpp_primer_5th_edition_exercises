@@ -1,0 +1,8 @@
+// if we defined serted as:
+
+Foo Foo::sorted() const & {
+	Foo ret(*this);
+	return ret.sorted();
+}
+
+// i think it would cause a recursion loop that would loop indefinitely, because ret is an lvalue, it would keep calling the current function from the return statement

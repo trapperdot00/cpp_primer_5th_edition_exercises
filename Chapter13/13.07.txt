@@ -1,0 +1,25 @@
+when we assign one StrBlob to another:
+	the compiler synthesizes a copy-assignment operator function for us, that works like this in code:
+		StrBlob &StrBlob::operator=(const StrBlob &rhs) {
+			data = rhs.data;
+			return *this;
+		}
+	the shared_ptr that is the now assigned to data, shares the pointed memory with rhs.data, rhs's data shared_ptr's use_count is incremented by one
+
+when we assign one StrBlobPtr to another:
+	the compiler synthesized a copy-assignment operator function for us, that works like this in code:
+		StrBlobPtr &StrBlobPtr::operator=(const StrBlobPtr &rhs) {
+			wptr = rhs.wptr;
+			curr = rhs.curr;
+			return *this;
+		}
+	the weak_ptr points to the same memory as rhs's wptr, use_count is not incremented, because it is a weak pointer
+
+when we assign one ConstStrBlobPtr to another:
+	the compiler synthesizes a copy-assignment operator function for us, that works like this in code:
+		ConstStrBlobPtr &ConstStrBlobPtr::operator=(const ConstStrBlobPtr &rhs) {
+			wptr = rhs.wptr;
+			curr = rhs.curr;
+			return *this;
+		}
+	same

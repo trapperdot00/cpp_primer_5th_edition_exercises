@@ -1,0 +1,3 @@
+the copy constructor should allocate new data copied from the copied-from object
+the copy-assignment operator should allocate new data copied from the object, then free the current object's old value, then assign the newly allocated data to the pointers
+we don't need a destructor for the StrBlob because the shared_ptr class manages the deletion of our allocated data

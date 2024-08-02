@@ -1,0 +1,4 @@
+We need to supply our own copy-control members, because the compiler wrongly synthesizes them to copy the ids from the other object.
+We need to specify to only copy the employee's name from the other object, if we want unique ids for each employee.
+
+It doesn't need a destructor since we don't allocate data members on the heap inside the class, that the compiler wouldn't delete. All data members use stack memory.

@@ -1,0 +1,7 @@
+// if we defined sorted as:
+
+Foo Foo::sorted const & {
+	return Foo(*this).sorted();
+}
+
+// the return statement would call the sorted that operates on an rvalue reference correctly

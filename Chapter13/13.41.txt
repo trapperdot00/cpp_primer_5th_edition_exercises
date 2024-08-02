@@ -1,0 +1,16 @@
+we used the postfix increment in construct's call inside push_back because we could have written into unallocated memory if we used the prefix version of it
+
+consider:
+
+size = 3
+capacity = 4
+
+|	 |	|	 |	|	 |	 |	 |	  |			|
+|----|	|----|	|----|	 |	 |----|			|
+						 |					|
+
+|							 |				|
+elements					 first_free		cap
+
+in our postfix increment version, the correct element denoted by first_free is constructed
+if we used the prefix increment version, we would have missed one element and would have written into unallocated memory

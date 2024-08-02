@@ -1,0 +1,3 @@
+if the function parameter was a const reference to numbered, we would get the correct serial numbers back from the function, three for our three objects.
+
+the referencing avoids copying, and using the copy constructor that generates a new serial number for the constructed object

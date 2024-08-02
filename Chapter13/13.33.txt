@@ -1,0 +1,1 @@
+the parameters to save and remove are Folder & , because we need to change the Folder object's value, if they were const references to Folder, we wouldn't be able to call addMsg and remMsg on the folder object, because they operate on nonconst objects. if they were copies, the function would only change a local copy of the argument

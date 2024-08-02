@@ -1,0 +1,2 @@
+The call to swap inside swap(HasPtr &, HasPtr &) doesn't cause a recursion loop, because the using declaration for std::swap inside our swap function doesn't hide the declaration of our swap
+If there is a type specific match for swap, it will be a better match for the call to swap than std::swap

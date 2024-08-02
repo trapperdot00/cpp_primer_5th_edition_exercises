@@ -1,0 +1,1 @@
+A pointerlike version of HasPtr wouldn't benefit from a defined swap function for that type, because it doesn't allocate resources when using the copy constructor or the copy-assignment operator

@@ -1,0 +1,50 @@
+before, when we used an assignment operator that took a nonreference object of HasPtr, it swapped the value in the left-hand side with the right-hand side
+
+obj1 = obj2;
+code for lvalue rhs:
+
+	HasPtr temp(obj2);	// calls copy constructor that allocates a new string!!!
+	
+	string *lhstemp = obj1.ps;
+	obj1.ps = temp.ps;
+	temp.ps = lhstemp;
+
+	int lhstempi = obj1.i;
+	obj1.i = temp.i;
+	temp.i = lhstempi;
+
+	delete temp.ps;
+	return obj1;
+
+NEW code for lvalue rhs:
+	// DIRECT CALL TO COPY-ASSIGNMENT OPERATOR, NO NEED TO COPY ELEMENT INTO A TEMPORARY
+	std::string *newps = new std::string(*obj2.ps);
+	delete obj1.ps;
+	obj1.ps = newps;
+	obj1.i = obj2.i;
+	return obj1;
+
+-----------------------------------------------------------------------------------------|
+
+code for rvalue rhs:
+
+	HasPtr temp(obj2);	// calls move constructor
+
+	string *lhstemp = obj1.ps;		// NEEDS TO COPY A POINTER
+	obj1.ps = temp.ps;
+	temp.ps = lhstemp;
+
+	int lhstempi = obj1.i;			// NEEDS TO COPY AN INT
+	obj1.i = temp.i;
+	temp.i = lhstempi;
+
+	delete temp.ps;
+	return obj1;
+
+NEW code for rvalue rhs:
+	// DIRECT CALL TO MOVE-ASSIGNMENT OPERATOR, NO NEED TO COPY ELEMENT INTO A TEMPORARY
+	delete obj1.ps;
+	obj1.ps = obj2.ps;				// DIRECTLY MOVES THE POINTER
+	obj1.i = obj2.i;				// DIRECTLY MOVES THE INT
+	obj2.ps = nullptr;
+	return obj1;

@@ -1,0 +1,11 @@
+// numbered is a class with a default constructor that generates a unique serial number for each object, which is stored in a data member named mysn. assuming numbered uses the synthesized copy-control members and given the following function:
+
+void f(numbered s) { cout << s.mysn << endl; }
+
+// what output does the following code produce?
+
+numbered a, b = a, c = b;
+f(a); f(b); f(c);
+
+// a will have a unique serial number, b will have a copy of a's serial num, c will have a copy of b's serial num, which is a's serial num, all of the numbered object share the same serial number
+// the output will show a's serial number every call

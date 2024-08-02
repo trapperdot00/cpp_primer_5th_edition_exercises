@@ -1,0 +1,4 @@
+TreeNode is a pointerlike class: copy and assignment copies the pointers' values, not the pointed values
+It uses reference counting to ensure that it is safe to delete the dynamically allocated objects when there are no objects of this class type using it
+
+BinStrTree is a valuelike class: copy and assignment copies the pointed value instead of the pointer's value

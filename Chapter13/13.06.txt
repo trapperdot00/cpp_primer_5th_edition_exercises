@@ -1,0 +1,5 @@
+the copy-assignment operator is the = operator
+it is used when assigning to a class type object from another object of the same type
+
+the synthetised copy-assignment operator assigns each static data member of the right-hand object to the left-hand object, with the = operator for each member
+the copy-assignment operand is synthesized when we omit its definition

@@ -1,0 +1,38 @@
+What happens when we copy, assign or destroy objects of TextQuery, and QueryResult objects?
+
+TextQuery:
+	
+	Copy:
+		The class uses the synthesized copy constructor, that directly copies every data member from the other object's members. (this.mem1(other.mem1);)
+		The shared_ptr<vector<string>> that points to the file's contents is copied, the new object's file member points to the file's contents, the copied-from shared_ptr's use_count is incremented by one.
+		The map<string, shared_ptr<set<line_no>>> is copied, the shared_ptr's use_count is incremented by one in its value_type.
+	
+	Assignment:
+		The class uses the synthesized copy-assignment operator, that assigns every data member from the other object's members. (this.mem1 = other.mem1;)
+		The shared_ptr's previous value is discarded, use_count is decremented, shared_ptr now points to the same object that the other object's shared_ptr points, use_count is incremented by one after assignment.
+		The map is assigned, the previous value is discarded, the shared_ptr's use_count is decremented in its value_type, after assignment, its use_count is incremented by one.
+	
+	Destruction:
+		The synthesized destructor is fine for use, there are no data members allocated on the heap that the compiler doesn't delete. The shared_ptr classes manage the heap-allocated objects.
+		The shared_ptr<vector<string>> is deleted, its use_count is decremented. If there are no other shared_ptrs pointing to the same object, then the underlying dynamically allocated object is destroyed, else it stays.
+		The map<string, shared_ptr<set<line_no>>> is destroyed, every pair is destroyed. If there are no other shared_ptrs pointing to the same object as the shared_ptr in a pair, the underlying objects is deleted, otherwise it remains. The shared_ptr's use_count is decremented by one in each pair.
+	
+	
+QueryResult:
+	Copy:
+		We use the synthesized copy constructor for this class.
+		The string representing the value to search for is directly copied from the other QueryResult object.
+		The shared_ptr<set<line_no>> is directly copied from the other object, their use_count is incremented by one. They point to the same object, and that object remains in dynamic memory until nobody uses it.
+		The shared_ptr<vector<string>> is copied from the other object. Their use_count is incremented by one. They point to the same object.
+
+	Assignment:
+		We use the synthesized copy-assignment operator for this class.
+		The string is assigned from the other object. They now have the same values.
+		The shared_ptr pointing to the set of line numbers now has a new value, points to the object's pointed value. The previous value of the shared_ptr's use_count is decremented. The new shared_ptr's use_count is incremented after the assignment.
+		The shared_ptr pointing to the vector of strings, representing each line from the text is assigned to. The previous pointer value's use_count is decremented by one, the now assigned pointer's use_count is incremented by one.
+
+	Destruction:
+		We use the synthesized destructor for the same reasons.
+		The string is destroyed.
+		The shared_ptr<set<line_no>> is destroyed: its use_count is decremented by one, the underlying dynamically allocated set is destroyed if there are no users left.
+		The shared_ptr<vector<string>> is destroyed: its use_count is decremented by one, the underlying dynamically allocated vector of strings it destroyed if there are no users left.

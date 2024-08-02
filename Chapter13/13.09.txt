@@ -1,0 +1,10 @@
+a destructor is a function that is run when
+	the class type goes out of scope
+	when the object of which they are a part of is destroyed
+	when they are element(s) in a container, and the container is destroyed
+	when dynamically allocated objects are deleted with a pointer to them
+	when temporary objects reach the end of the full expression they are created in, and they are destroyed
+
+the synthesized destructor is a compiler generated desctructor function that destroys all nonstatic data members, but it doesn't destroy dynamically allocated objects
+the nonstatic members are destroyed after the destructor body is executed, in reverse order from which they are initialized
+a destructor is synthesized when we omit the definition of one

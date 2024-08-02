@@ -1,0 +1,18 @@
+// Point is a class type with a public copy constructor
+
+Point global;
+Point foo_bar(Point arg)
+{
+	Point local = arg, *heap = new Point(global);
+	*heap = local;
+	Point pa[ 4 ] = { local , * heap };
+	return *heap;
+}
+
+// one copy constructor for calling the function: copying the Point argument into the parameter
+// one for copy initializing local to arg
+// one for creating a dynamic Point object, with the argument of a Point object
+// one for each element in the braced list initializer
+// one for copying the return value into the unnamed temporary at the call site
+
+// 6 copy constructor calls

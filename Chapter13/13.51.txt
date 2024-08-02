@@ -1,0 +1,20 @@
+you can't copy unique_ptrs
+you can't assign unique_ptrs
+
+but these functions are legal with unique_ptrs:
+
+unique_ptr<int> clone(int p) 
+{
+	return unique_ptr<int>(new int(p));
+}
+
+unique_ptr<int> clone(int p)
+{
+	unique_ptr<int> ret(new int(p));
+	return ret;
+}
+
+in both cases the move constructor is used to move the unique_ptr's value to the return value at the call's location
+the function's returned object is a temporary object, thus an rvalue
+
+FUNCTIONS THAT RETURN A NONREFERENCE TYPE YIELD RVALUES!!!

@@ -1,0 +1,2 @@
+if we had an assignment operator that takes a nonreference type and a move-assignment operator that took an rvalue reference, then there would be an error
+it would be an ambiguous function call, because an rvalue can match a nonreference type and an rvalue reference parameter with the same priority
