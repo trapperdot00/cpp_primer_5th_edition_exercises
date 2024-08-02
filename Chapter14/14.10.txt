@@ -1,0 +1,19 @@
+Describe the behavior of the Sales_data input operator if given the following inputs:
+
+a)
+0-201-99999-9 10 24.95
+
+// declare a double, named price
+// read into the Sales_data item's bookNo, then into its units_sold, then into the declared price
+// the condition that checks whether the istream object is in a valid state returns true, the Sales_data item's revenue member is
+// assigned the product of the item's units_sold member and the price
+// the overload for operator>> function returns the valid istream object
+
+b)
+10 24.95 0-210-99999-9
+
+// declare a double, named price
+// read into the Sales_data item's bookNo member, passes
+// read into the item's units_sold member, that is unsigned, passes, the istream object is still in a valid state, inputted floating point number truncated
+// read into price, the double, but encounters an invalid character, istream is now in an invalid state
+// the condition that checks the istream object's state returns false, item is assigned a default initialized Sales_data object to leave the object in a valid state

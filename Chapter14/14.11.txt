@@ -1,0 +1,14 @@
+what, if anything is wrong with the following Sales_data input operator?
+what would happen if we gave this operator the data in the previous exercise?
+
+istream& operator>>(istream& in, Sales_data& s)
+{
+	double price;
+	in >> s.bookNo >> s.units_sold >> price;
+	s.revenue = s.units_sold * price;
+	return in;
+}
+
+
+// if we gave invalid values into the input operator, price would be left undefined, and there is an operation using price's value
+// we have to check if the read succeeded

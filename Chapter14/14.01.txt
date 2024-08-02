@@ -1,0 +1,3 @@
+the overloaded operators share the same precedence and associativity with the built-in ones
+they don't guarantee the short-circuit evaluation of the &&, and || operations, and don't preserve their order of evaluation for operators, such as ||, and the comma operator (,)
+the address-of (unary &) operator ought not to be overloaded, as it can operate on class types too

@@ -1,0 +1,11 @@
+string and vector both define an overloaded ==
+svec1, svec2 are vector<string> objects
+
+a)
+	"cobble" == "stone"			// uses the overloaded operator== that takes two strings
+b)
+	svec1[0] == svec2[0]		// subscripting a vector returns the underlying type, so the string version is used
+c)
+	svec1 == svec2				// uses the operator== that takes two vectors
+d)
+	svec1[0] == "stone"			// uses the string overloaded == operator

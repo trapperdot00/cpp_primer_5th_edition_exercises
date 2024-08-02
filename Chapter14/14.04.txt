@@ -1,0 +1,27 @@
+explain how to decide whether the following operators should be class members:
+
+a)
+	operator%
+	// should be a nonmember function: symmetric operator that might convert either operand
+b)
+	operator%=
+	// should be a member, changes object's value
+c)
+	operator++
+	// should be a member, as it changes the state of their objects
+d)
+	operator->
+	// must be defined as a class-member
+e)
+	operator<<
+	// should be a nonmember function: symmetric operator, that might convert either operand
+f)
+	operator&&
+	// SHOULDN'T BE OVERLOADED, but if neccesary for unknown reasons, then it should be a nonmember
+g)
+	operator==
+	// should be a nonmember: symmetric operator that might convert either operand
+h)
+	operator()
+	// must be class-member
+
