@@ -1,0 +1,2 @@
+because we want empty data members, data is supplied by us using stream io operators
+the compiler creates a synthetized default constructor for us, that default initializes string to an empty string and vector to an empty vector

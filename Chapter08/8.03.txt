@@ -1,0 +1,3 @@
+while (cin >> i) {}
+
+when we use a stream as a condition, it is the same as using !fail(), if any error happens, the loop terminates
