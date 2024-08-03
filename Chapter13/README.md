@@ -174,10 +174,10 @@ Write the Message class as described in this section.
 ## [Exercise 13.35](13.35.txt)
 What would happen if Message used the synthesized versions of the
 copy-control members?
-## [Exercise 13.36](13.36)
+## [Exercise 13.36](13.36_37)
 Design and implement the corresponding Folder class. That class
 should hold a set that points to the Messages in that Folder.
-## [Exercise 13.37](13.37)
+## [Exercise 13.37](13.36_37)
 Add members to the Message class to insert or remove a given
 Folder* into folders. These members are analogous to Folder’s addMsg and
 remMsg operations.
