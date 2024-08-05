@@ -70,7 +70,7 @@ istream& operator>>(istream& in, Sales_data& s)
 ## [Exercise 14.12](14.12)
 Define an input operator for the class you used in exercise 7.40 from
 § 7.5.1 (p. 291). Be sure the operator handles input errors.
-# [Exercise 14.13](14.13)
+## [Exercise 14.13](14.13)
 Which other arithmetic operators (Table 4.1 (p. 139)), if any, do you think Sales_data ought to support? Define any you think the class should include.
 ## [Exercise 14.14](14.14.txt)
 Why do you think it is more efficient to define operator+ to call operator+= rather than the other way around?
