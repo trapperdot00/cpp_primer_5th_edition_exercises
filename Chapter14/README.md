@@ -70,3 +70,29 @@ istream& operator>>(istream& in, Sales_data& s)
 ## [Exercise 14.12](14.12)
 Define an input operator for the class you used in exercise 7.40 from
 § 7.5.1 (p. 291). Be sure the operator handles input errors.
+# [Exercise 14.13](14.13)
+Which other arithmetic operators (Table 4.1 (p. 139)), if any, do you think Sales_data ought to support? Define any you think the class should include.
+## [Exercise 14.14](14.14.txt)
+Why do you think it is more efficient to define operator+ to call operator+= rather than the other way around?
+## [Exercise 14.15](14.15)
+Should the class you chose for exercise 7.40 from § 7.5.1 (p. 291) define any of the arithmetic operators? If so, implement them. If not, explain why not. 
+## [Exercise 14.16](14.16)
+Define equality and inequality operators for your StrBlob (§ 12.1.1, p. 456), StrBlobPtr (§ 12.1.6, p. 474), StrVec (§ 13.5, p. 526), and String (§ 13.5, p. 531) classes.
+## [Exercise 14.17](14.17)
+Should the class you chose for exercise 7.40 from § 7.5.1 (p. 291) define the equality operators? If so, implement them. If not, explain why not.
+## [Exercise 14.18](14.18)
+Define relational operators for your StrBlob, StrBlobPtr, StrVec, and String classes.
+## [Exercise 14.19](14.19.txt)
+Should the class you chose for exercise 7.40 from § 7.5.1 (p. 291) define the relational operators? If so, implement them. If not, explain why not.
+## [Exercise 14.20](14.20)
+Define the addition and compound-assignment operators for your Sales_data class.
+## [Exercise 14.21](14.21)
+Write the Sales_data operators so that + does the actual addition and += calls +. Discuss the disadvantages of this approach compared to the way these operators were defined in § 14.3 (p. 560) and § 14.4 (p. 564).
+## [Exercise 14.22](14.22)
+Define a version of the assignment operator that can assign a string representing an ISBN to a Sales_data.
+## [Exercise 14.23](14.23)
+Define an initializer_list assignment operator for your version of the StrVec class.
+## [Exercise 14.24](14.24)
+Decide whether the class you used in exercise 7.40 from § 7.5.1 (p. 291) needs a copy- and move-assignment operator. If so, define those operators.
+## [Exercise 14.25](14.25)
+Implement any other assignment operators your class should define. Explain which types should be used as operands and why.
