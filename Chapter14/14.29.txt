@@ -1,0 +1,1 @@
+we did not define a const version of the increment and decrement operators, because these operators change the StrBlobPtr object's curr data member
