@@ -1,0 +1,2 @@
+it is more efficient to define operator+ to call operator+= because operator+ calls the compound assignment operator on behalf of the local temporary Sales_data object
+if operator+= were to call operator+, it would always initialize another Sales_data object instead of adding each element's value up against the other object's elements

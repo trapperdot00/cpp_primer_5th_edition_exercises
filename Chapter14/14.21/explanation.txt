@@ -1,0 +1,1 @@
+since the operator+ function makes a temporary of the left-hand operand, it is less efficient than to use memberwise compound addition in our compound addition function inside Sales_data

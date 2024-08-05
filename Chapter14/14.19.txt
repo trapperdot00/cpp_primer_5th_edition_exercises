@@ -1,0 +1,1 @@
+my Employee class shouldn't define the relation operators, since there is no logical definition of these operators for this class
