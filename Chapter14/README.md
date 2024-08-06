@@ -96,3 +96,25 @@ Define an initializer_list assignment operator for your version of the StrVec cl
 Decide whether the class you used in exercise 7.40 from § 7.5.1 (p. 291) needs a copy- and move-assignment operator. If so, define those operators.
 ## [Exercise 14.25](14.25)
 Implement any other assignment operators your class should define. Explain which types should be used as operands and why.
+## [Exercise 14.26](14.26)
+
+## [Exercise 14.27](14.27)
+
+## [Exercise 14.28](14.28)
+
+## [Exercise 14.29](14.29.txt)
+
+## [Exercise 14.30](14.30)
+
+## [Exercise 14.31](14.31.txt)
+
+## [Exercise 14.32](14.32)
+
+## [Exercise 14.33](14.33.txt)
+
+## [Exercise 14.34](14.34)
+
+## [Exercise 14.35](14.35)
+
+## [Exercise 14.36](14.36)
+
