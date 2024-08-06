@@ -1,4 +1,4 @@
-# My answers for the book 'C++ Primer 5th Edition'
+# My answers for the exercises in the book 'C++ Primer 5th Edition'
 ### [Chapter01](Chapter01/): Getting Started
 ## Part I - The Basics:
 ### [Chapter02](Chapter02/): Variables and Basic Types
