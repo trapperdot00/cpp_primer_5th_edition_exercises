@@ -97,24 +97,45 @@ Decide whether the class you used in exercise 7.40 from § 7.5.1 (p. 291) needs 
 ## [Exercise 14.25](14.25)
 Implement any other assignment operators your class should define. Explain which types should be used as operands and why.
 ## [Exercise 14.26](14.26)
-
+Define subscript operators for your StrVec, String, StrBlob, and StrBlobPtr classes.
 ## [Exercise 14.27](14.27)
-
+Add increment and decrement operators to your StrBlobPtr class.
 ## [Exercise 14.28](14.28)
-
+Define addition and subtraction for StrBlobPtr so that these operators implement pointer arithmetic (§ 3.5.3, p. 119).
 ## [Exercise 14.29](14.29.txt)
-
+We did not define a const version of the increment and decrement operators. Why not?
 ## [Exercise 14.30](14.30)
-
+Add dereference and arrow operators to your StrBlobPtr class and to the ConstStrBlobPtr class that you defined in exercise 12.22 from § 12.1.6 (p. 476). Note that the operators in constStrBlobPtr must return const references because the data member in constStrBlobPtr points to a const vector.
 ## [Exercise 14.31](14.31.txt)
-
+Our StrBlobPtr class does not define the copy constructor, assignment operator, or a destructor. Why is that okay?
 ## [Exercise 14.32](14.32)
-
+Define a class that holds a pointer to a StrBlobPtr. Define the overloaded arrow operator for that class.
 ## [Exercise 14.33](14.33.txt)
-
+How many operands may an overloaded function-call operator take?
 ## [Exercise 14.34](14.34)
-
+Define a function-object class to perform an if-then-else operation: The call operator for this class should take three parameters. It should test its first parameter and if that test succeeds, it should return its second parameter; otherwise, it should return its third parameter.
 ## [Exercise 14.35](14.35)
-
+Write a class like PrintString that reads a line of input from an istream and returns a string representing what was read. If the read fails, return the empty string.
 ## [Exercise 14.36](14.36)
-
+Use the class from the previous exercise to read the standard input, storing each line as an element in a vector.
+## [Exercise 14.37](14.37)
+Write a class that tests whether two values are equal. Use that object and the library algorithms to write a program to replace all instances of a given value in a sequence.
+## [Exercise 14.38](14.38)
+Write a class that tests whether the length of a given string matches a given bound. Use that object to write a program to report how many words in an input file are of sizes 1 through 10 inclusive.
+## [Exercise 14.39](14.39)
+Revise the previous program to report the count of words that are sizes 1 through 9 and 10 or more.
+## [Exercise 14.40](14.40)
+Rewrite the biggies function from § 10.3.2 (p. 391) to use function-object classes in place of lambdas.
+## [Exercise 14.41](14.41.txt)
+Why do you suppose the new standard added lambdas? Explain when you would use a lambda and when you would write a class instead.
+## [Exercise 14.42](14.42)
+Using library function objects and adaptors, deﬁne an expression to
+```
+(a) Count the number of values that are greater than 1024
+(b) Find the ﬁrst string that is not equal to pooh
+(c) Multiply all values by 2
+```
+## [Exercise 14.43](14.43.cpp)
+Using library function objects, determine whether a given int value is divisible by any element in a container of ints.
+## [Exercise 14.44](14.44.cpp)
+Write your own version of a simple desk calculator that can handle binary operations.

@@ -1,0 +1,2 @@
+i think the 'new' standard added lambdas to allow programmers to write code faster and easier that would require a class in a small expression
+i would use a lambda when i use the function object only once or twice, and i would use a class when i use its overloaded call operator more than once
