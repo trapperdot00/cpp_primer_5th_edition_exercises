@@ -139,3 +139,59 @@ Using library function objects and adaptors, deﬁne an expression to
 Using library function objects, determine whether a given int value is divisible by any element in a container of ints.
 ## [Exercise 14.44](14.44.cpp)
 Write your own version of a simple desk calculator that can handle binary operations.
+## [Exercise 14.45](14.45)
+Write conversion operators to convert a Sales_data to string and to double. What values do you think these operators should return?
+## [Exercise 14.46](14.46.txt)
+Explain whether defining these Sales_data conversion operators is a good idea and whether they should be explicit.
+## [Exercise 14.47](14.47.txt)
+Explain the difference between these two conversion operators:
+```
+struct Integral {
+    operator const int();
+    operator int() const;
+};
+```
+## [Exercise 14.48](14.48.txt)
+Determine whether the class you used in exercise 7.40 from § 7.5.1 (p. 291) should have a conversion to bool. If so, explain why, and explain whether the operator should be explicit. If not, explain why not.
+## [Exercise 14.49](14.49)
+Regardless of whether it is a good idea to do so, define a conversion to bool for the class from the previous exercise.
+## [Exercise 14.50](14.50.txt)
+Show the possible class-type conversion sequences for the initializations of ex1 and ex2. Explain whether the initializations are legal or not.
+```
+struct LongDouble {
+    LongDouble(double = 0.0);
+    operator double();
+    operator float();
+};
+LongDouble ldObj;
+int ex1 = ldObj;
+float ex2 = ldObj;
+```
+## [Exercise 14.51](14.51.txt)
+Show the conversion sequences (if any) needed to call each version of calc and explain why the best viable function is selected.
+```
+void calc(int);
+void calc(LongDouble);
+double dval;
+calc(dval); // which calc?
+```
+## [Exercise 14.52](14.52.txt)
+Which operator+, if any, is selected for each of the addition expressions? List the candidate functions, the viable functions, and the type conversions onthe arguments for each viable function:
+```
+struct LongDouble {
+    // member operator+ for illustration purposes; + is usually a nonmember
+    LongDouble operator+(const SmallInt&);
+    // other members as in § 14.9.2 (p. 587)
+};
+LongDouble operator+(LongDouble&, double);
+SmallInt si;
+LongDouble ld;
+ld = si + ld;
+ld = ld + si;
+```
+## [Exercise 14.53](14.53.txt)
+Given the definition of SmallInt on page 588, determine whether the following addition expression is legal. If so, what addition operator is used? If not, how might you change the code to make it legal?
+```
+SmallInt s1;
+double d = s1 + 3.14;
+```

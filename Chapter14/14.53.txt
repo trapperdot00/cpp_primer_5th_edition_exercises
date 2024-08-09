@@ -1,0 +1,21 @@
+class SmallInt {
+	friend SmallInt operator+(const SmallInt&, const SmallInt&);
+public:
+	SmallInt(int = 0);						// conversion from int
+	operator int() const { return val; }	// conversion to int
+private:
+	std::size_t val;
+};
+
+SmallInt s1;
+
+double d = s1 + 3.14;
+// ambiguous: it can either convert s1 to int, to add the two values, or convert 3.14 to a SmallInt, then do the addition
+
+// fix 1:
+double d = s1.operator int() + 3.14;
+
+// fix 2:
+double d = s1 + SmallInt(3.14);
+double d = s1 + static_cast<SmallInt>(3.14);
+

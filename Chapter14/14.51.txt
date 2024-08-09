@@ -1,0 +1,20 @@
+struct LongDouble {
+	LongDouble(double = 0.0);
+	operator double();
+	operator float();
+};
+
+void calc(int);
+void calc(LongDouble);
+
+double dval;
+calc(dval);		// which calc?
+
+// to call void calc(int):
+// convert dval from double to int using a built-in conversion
+
+// to call void calc(LongDouble):
+// convert dval from double to LongDouble
+
+// the best viable function is void calc(int): 
+// the match through the class type conversion(5) is lower ranked than the match through an arithmetic conversion (4)

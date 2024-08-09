@@ -1,0 +1,19 @@
+struct LongDouble {
+	LongDouble(double = 0.0);
+	operator double();
+	operator float();
+};
+
+LongDouble ldObj;	// legal: uses the default constructor
+
+int ex1 = ldObj;
+// illegal: ambiguous function call:
+// 1:
+// ldObj can be converted using the user-defined conversion to double, and
+// then be converted using the built-in conversion to int
+// 2:
+// ldObj can be converted to float using the user-defined conversion,
+// then it can be converted to int using the built-in conversion
+
+float ex2 = ldObj;
+// legal: can call the user-defined conversion to float, which is an exact match for ex2's type

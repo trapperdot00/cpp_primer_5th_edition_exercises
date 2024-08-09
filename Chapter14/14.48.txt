@@ -1,0 +1,1 @@
+the Employee class could benefit from a conversion operator to bool, for example when all data members have the default values

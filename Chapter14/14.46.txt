@@ -1,0 +1,2 @@
+defining conversion operators for Sales_data that convert to string and double is unnecessary, the class doesn't really need conversion operators, because it could be misleading
+if we defined the conversion operators for string and double, we should put an explicit tag before them

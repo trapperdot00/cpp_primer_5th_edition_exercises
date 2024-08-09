@@ -1,0 +1,8 @@
+struct Integral {
+	operator const int();
+	operator int() const;
+};
+
+// the first conversion operator returns a 'const int', and is not a const member function -> can have access to modify the data members and can only be called on nonconst objects
+
+// the second conversion operator returns an int, and is a const function: this is the better one
