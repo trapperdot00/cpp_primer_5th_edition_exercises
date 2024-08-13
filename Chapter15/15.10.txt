@@ -1,0 +1,4 @@
+ifstream inherits from istream, istream is the base class, ifstream is the derived class
+since we have a parameter of const reference to istream, we can use a derived type to bound the reference to, and use the 'istream part' of the ifstream object
+ifstream has a subpart of istream, and defines its own data members in another subpart
+the const reference to istream has a static type of istream, while its dynamic type is ifstream in this case

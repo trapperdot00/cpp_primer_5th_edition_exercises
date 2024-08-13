@@ -1,0 +1,30 @@
+class base {
+public:
+	string name() { return basename; }
+	virtual void print(ostream &os) { os << basename; }
+private:
+	string basename;
+};
+
+// print function in base is a virtual, which means that derived classes can override its definition
+// print outputs the private member 'basename' to an ostream reference
+
+
+class derived : public base {
+public:
+	void print(ostream &os) { print(os); os << " " << i; }
+private:
+	int i;
+};
+
+// print in derived is implicitly overridden, it calls itself over and over, because it doesn't specify to call base's print function explicitly
+
+// fix:
+
+class derived: public base {
+public:
+	void print(ostream &os) { base::print(os); os << " " << i; }
+...
+};
+
+// it now correctly calls base's print function to print the private string from the subpart that it inherited from base, and we can't access normally, and then prints the data member from its own subpart

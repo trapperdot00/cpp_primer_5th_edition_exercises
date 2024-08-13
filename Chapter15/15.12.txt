@@ -1,0 +1,1 @@
+if we have a class that inherits from another, and we don't want other classes that inherit from our class to override the function that we overrode, we can use override with final

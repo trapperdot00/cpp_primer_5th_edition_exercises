@@ -1,0 +1,4 @@
+an expression's static type can differ from its dynamic type when:
+	a pointer to base class type points to a derived object
+	a reference to base class type is bound to a derived object
+	calling a virtual function on a reference/pointer to a base type, where the pointed/referred to type is a derived type

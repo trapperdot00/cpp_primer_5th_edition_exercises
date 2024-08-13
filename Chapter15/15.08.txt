@@ -1,0 +1,1 @@
+the static type of an expression is known at compile time, whereas the dynamic type of an object in memory is not known until run-time

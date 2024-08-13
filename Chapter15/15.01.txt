@@ -1,0 +1,2 @@
+a virtual member is a member which the base class defines, but expects the derived classes to override the base class' function definition
+virtual functions enable dynamic binding or run-time binding, when a function is called by a reference or a pointer to the base class

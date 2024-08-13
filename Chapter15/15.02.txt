@@ -1,0 +1,2 @@
+the protected access specifier is different from private in the way that derived classes can use the protected members from the base class, whereas private members can only be used from the base class
+users of our classes still can only access the public members

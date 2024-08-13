@@ -1,0 +1,14 @@
+class Base { ... };
+
+a)
+class Derived : public Derived { ... };
+// error: base class must be defined before inheriting from it,
+// therefore we can't derive a class from itself
+
+b)
+class Derived : private Base { ... };
+// legal
+
+c)
+class Derived : public Base;
+// error: derivation list can't appear inside a class declaration

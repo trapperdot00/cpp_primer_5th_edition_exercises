@@ -1,0 +1,30 @@
+base bobj;
+base *bp1 = &bobj;
+base &br1 = bobj;
+derived dobj;
+base *bp2 = &dobj;
+base &br2 = dobj;
+
+a)
+bobj.print();
+// called at compile time, since dynamic binding only applies to virtual functions called through a reference or a pointer to a base class type
+
+b)
+dobj.print();
+// called at compile time, not reference or pointer to a base class type
+
+c)
+bp1->name();
+// called at compile time, name is not a virtual function that could support dynamic binding, it is only defined in base
+
+d)
+bp2->name();
+// called at compile time, name is not a virtual function
+
+e)
+br1.print();
+// called at run time, br1 is a reference to a base class, print is a virtual function: dynamic binding, calls print defined in base
+
+f)
+br2.print();
+// called at run time, br2 is a reference to a base class type (static type is base, dynamic is derived), print is a virtual function, calls print defined in derived
