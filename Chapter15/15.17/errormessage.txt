@@ -1,0 +1,11 @@
+15.17.cpp: In function ‘int main()’:
+15.17.cpp:4:20: error: cannot declare variable ‘err’ to be of abstract type ‘Disc_quote’
+    4 |         Disc_quote err("Bad", 13, 2, 0.0);
+      |                    ^~~
+In file included from 15.17.cpp:1:
+Disc_quote.h:9:7: note:   because the following virtual functions are pure within ‘Disc_quote’:
+    9 | class Disc_quote : public Quote {
+      |       ^~~~~~~~~~
+Disc_quote.h:14:16: note:     ‘virtual double Disc_quote::net_price(std::size_t) const’
+   14 |         double net_price(std::size_t) const = 0;
+      |                ^~~~~~~~~

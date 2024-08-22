@@ -1,0 +1,3 @@
+we defined a default constructor for Disc_quote, because otherwise it would only have the constructor that takes a string, a double, a size_t and another double
+explicitly defining one constructor prevents the compiler from synthesizing one from us, so we have to explicitly ask it to generate one for us
+removing the default constructor would prevent Bulk_quote from defining a default constructor, as it would try to default initialize the Disc_quote subpart using Disc_quote's default constructor which is deleted

@@ -1,0 +1,5 @@
+in my Polygon class, there is a protected member named centerPoint, that keeps track of the coordinates of the polygon's center. it is a protected member to allow derived classes, such as my Square class to modify its value, for example by moving the square in a direction
+
+there are three virtual functions in Polygon, one is the destructor, and the other two are the perimeter and area functions. since Polygon is an abstract base class, i made these two virtual functions pure
+
+i made the interfaces of Square and Polygon public, and added a function that prints the current center coordinates that takes an ostream reference and a reference to a Polygon to enable dynamic binding for all derived classes, this function is a friend of Polygon

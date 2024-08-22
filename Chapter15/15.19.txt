@@ -1,0 +1,22 @@
+void memfcn(Base &b) { b = *this; }
+
+Base:
+	// legal
+
+Pub_Derv:
+	// legal: derived to base conversion to a direct base is always accessible to members and friends of a derived class regardless of how the derived inherits from base
+
+Priv_Derv:
+	// legal
+
+Prot_Derv:
+	// legal
+
+Derived_from_Public:
+	// legal: classes derived from a derived class that inherits from the base using public or protected is legal
+
+Derived_from_Private:
+	// illegal: classes derived from a derived class that inherits from the base using private is not possible
+
+Derived_from_Protected:
+	// legal

@@ -64,3 +64,40 @@ base &br2 = dobj;
 (e) br1.print();
 (f) br2.print();
 ```
+## [Exercise 15.15](15.15)
+Define your own versions of Disk_quote and Bulk_quote.
+## [Exercise 15.16](15.16)
+Rewrite the class representing a limited discount strategy, which you wrote for the exercises in § 15.2.2 (p. 601), to inherit from Disc_quote.
+## [Exercise 15.17](15.17)
+Try to define an object of type Disc_quote and see what errors you get from the compiler.
+## [Exercise 15.18](15.18.txt)
+Given the classes from page 612 and page 613, and assuming each object has the type specified in the comments, determine which of these assignments are legal. Explain why those that are illegal aren’t allowed:
+```
+Base *p = &d1;  //  d1 has type Pub_Derv
+p = &d2;        //  d2 has type Priv_Derv
+p = &d3;        //  d3 has type Prot_Derv
+p = &dd1;       //  dd1 has type Derived_from_Public
+p = &dd2;       //  dd2 has type Derived_from_Private
+p = &dd3;       //  dd3 has type Derived_from_Protected
+```
+## [Exercise 15.19](15.19.txt)
+Assume that each of the classes from page 612 and page 613 has a member function of the form:
+```
+void memfcn(Base &b) { b = *this; }
+```
+For each class, determine whether this function would be legal.
+## [Exercise 15.20](15.20)
+Write code to test your answers to the previous two exercises.
+## [Exercise 15.21](15.21)
+Choose one of the following general abstractions containing a family of types (or choose one of your own). Organize the types into an inheritance hierarchy:
+(a) Graphical file formats (such as gif, tiff, jpeg, bmp)
+(b) Geometric primitives (such as box, circle, sphere, cone)
+(c) C++ language types (such as class, function, member function)
+## [Exercise 15.22](15.22.txt)
+For the class you chose in the previous exercise, identify some of the likely virtual functions as well as public and protected members.
+## [Exercise 15.23](15.23.txt)
+Assuming class D1 on page 620 had intended to override its inherited fcn function, how would you fix that class? Assuming you fixed the class so that fcn matched the definition in Base, how would the calls in that section be resolved?
+## [Exercise 15.24](15.24.txt)
+What kinds of classes need a virtual destructor? What operations must a virtual destructor perform?
+## [Exercise 15.25](15.25.txt)
+Why did we define a default constructor for Disc_quote? What effect, if any, would removing that constructor have on the behavior of Bulk_quote?

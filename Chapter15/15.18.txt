@@ -1,0 +1,17 @@
+Base *p = &d1;	//	d1 has type Pub_Derv
+// legal: users can convert derived to base, Pub_Derv inherits publicly from Base
+
+p = &d2;		//	d2 has type Priv_Derv
+// illegal: users can't convert derived to base: Priv_Derv inherits privately from Base
+
+p = &d3;		//	d3 has type Prot_Derv
+// illegal: users can't convert derived to base: Prot_Derv inherits from Base using protected
+
+p = &dd1;		//	dd1 has type Derived_from_Public
+// legal
+
+p = &dd2;		//	dd2 has type Derived_from_Private
+// illegal
+
+p = &dd3;		//	dd3 has type Derived_from_Protected
+// illegal
