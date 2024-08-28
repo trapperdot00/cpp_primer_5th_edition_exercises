@@ -1,0 +1,28 @@
+(a)	Query(s1) | Query(s2) & ~ Query(s3);
+// 3 Query objects are constructed with the given strings: all three objects point to a newly generated WordQuery
+// bitwise NOT operator generates a Query bound to a new NotQuery
+// bitwise AND operator generates a Query bound to a new AndQuery
+// bitwise OR operator generates a Query bound to a new OrQuery
+
+// 3 WordQuery objects, 1 NotQuery object, 1 AndQuery object, 1 OrQuery object
+
+
+(b)	Query(s1) | (Query(s2) & ~ Query(s3));
+// 3 Query objects that are bound to a new WordQuery are constructed using strings
+// bitwise NOT operator generates a Query bound to a new NotQuery
+// bitwise AND operator generates a Query bound to a new AndQuery
+// bitwise OR operator generates a Query bound to a new OrQuery
+
+// 3 WordQuery, 1 NotQuery, 1 AndQuery, 1 OrQuery
+
+
+(c)	(Query(s1) & (Query(s2)) | (Query(s3) & Query(s4)));
+		// Query(s1) & Query(s2) | (Query(s3) & Query(s4));
+// 4 Query objects constructed with a string, bound to a new WordQuery
+// bitwise AND operator generates a Query bound to a new AndQuery
+		// Query(s1) & Query(s2) | Query->AndQuery
+// bitwise AND operator generates a Query bound to a new AndQuery
+		// Query->AndQuery | Query->AndQuery
+// bitwise OR operator generates a Query bound to a new OrQuery
+
+// 4 WordQuery, 2 AndQuery, 1 OrQuery

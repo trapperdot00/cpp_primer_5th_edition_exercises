@@ -1,0 +1,9 @@
+When a Query object is copied, since we didn't define a copy constructor, the compiler will synthesize one for the class that will memberwise copy each of the data members of the given object to the defined one: it will copy the shared_ptr<Query_base>
+Moving will move the shared_ptr using the compiler synthesized move constructor
+Assigning to another object of type Query will use the compiler synthesized copy-assignment operator, that will assign the shared_ptr to the other one
+Destroying a Query object will destroy the shared_ptr, call its destructor
+
+Since we manage dynamic memory with smart pointers, we don't have to explicitly define the copy control members to allocate or delete memory
+Smart pointers manage memory the same way using use_count, so that when there are no users of the pointed to object, it will delete that memory
+Assignment and copy increase the use_count, move and destruction decrements it
+The moved from pointer remains in a state that correctly deals with the event of calling its destructor, points to a nullptr, freeing a nullptr is legal

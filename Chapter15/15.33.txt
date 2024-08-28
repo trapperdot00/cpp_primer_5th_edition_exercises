@@ -1,0 +1,3 @@
+Query_base also relies on the compiler synthesized copy control members, but it doesn't have any data members, it is an abstract class
+The synthesized copy control members ensure that the derived classes' synthesized copy control members can call their base class' copy control members
+Query_base declares its destructor as a virtual function that can be overridden by the derived classes, but relies on the compiler to generate a definition for it

@@ -1,2 +1,2 @@
-base classes should define a virtual destructor if any derived class allocates dynamic memory to allow the deletion of pointers to base that have the dynamic type of a derived class via dynamic linking (if the destructor is not virtual, it is undefined behavior)
+base classes should define a virtual destructor if any derived class allocates dynamic memory to allow the deletion of pointers to base that have the dynamic type of a derived class via dynamic binding (if the destructor is not virtual, it is undefined behavior)
 the virtual destructor should delete the dynamic memory allocated by the class it is defined in

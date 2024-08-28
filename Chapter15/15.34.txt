@@ -1,0 +1,36 @@
+Query q = Query("fiery") & Query("bird") | Query("wind");
+
+(a) constructors:
+	// Query("fiery"), Query("bird"), Query("wind")
+	the three Query objects are constructed from the given string (order of evaluation undetermined):
+		Query's constructor calls WordQuery's constructor, passing the string as argument
+	// Query("fiery") & Query("bird")
+	the bitwise AND operator takes two constant references to Query:
+		it dynamically alloates a new AndQuery object passing the two arguments to the constructor
+		the address that is returned from the allocation is used as a constructor to a shared_ptr that points to a Query_base
+		the shared_ptr is used as an argument to the temporary Query object that is constructed using the return statement
+	// %temp Query->AndQuery% | Query("wind")
+	the bitwise OR operator takes two constant references to Query:
+		it dynamically allocates a new OrQuery object passing the two arguments to the constructor
+		the allocation's returned address is used to construct a shared_ptr that points to a Query_base
+		the shared_ptr is used as an argument to the Query object's constructor that is returned from the function
+	
+
+(b) calls to rep from: cout << q:
+	// Query q	->	OrQuery		|->	Query	->	WordQuery
+	//							|->	Query	->	AndQuery	|->	Query	->	WordQuery
+	//		  												|->	Query	->	WordQuery
+	calls ostream &operator<<(ostream &, const Query &):
+		function calls rep on the given Query:
+		Query::rep calls the virtual function rep on the shared_ptr that points to the base class type Query_base, to enable dynamic binding, in this case calls BinaryQuery::rep (this is the OrQuery part):
+			BinaryQuery::rep calls rep on both of the Query objects that it contains:
+				rhs.rep calls Query::rep, that calls the virtual function rep on the pointer, calls WordQuery::rep ("wind")
+				lhs.rep calls Query::rep, that calls the virtual function rep on the pointer, calls BinaryQuery::rep (this is the AndQuery part):
+					BinaryQuery::rep calls rep on both of the Query objects it contains:
+						lhs.rep calls Query::rep, that calls WordQuery::rep ("fiery")
+						rhs.rep calls Query::rep, that calls WordQuery::rep ("bird")
+
+(c) calls to eval from: q.eval():
+	// eval is defined in Query, WordQuery, and in both AndQuery and OrQuery
+	calls Query::eval:
+		calls OrQuery::eval through the shared_ptr via dynamic binding at run time, which is yet to be defined
