@@ -152,7 +152,6 @@ Reimplement your classes to use built-in pointers to Query_base rather than shar
 Design and implement one of the following enhancements:
 ```
 (a) Print words only once per sentence rather than once per line.
-(b) Introduce a history system in which the user can refer to a previous query by
-number, possibly adding to it or combining it with another.
+(b) Introduce a history system in which the user can refer to a previous query by number, possibly adding to it or combining it with another.
 (c) Allow the user to limit the results so that only matches in a given range of lines are displayed.
 ```
