@@ -1,0 +1,5 @@
+if the rhs member returned an empty set in the OrQuery class' eval function, the QueryResult returned would only contain lhs' returned set, the insertion that would insert rhs' set's elements wouldn't insert anything, because the begin and end pointers/iterators would point to the same element, empty range
+
+if the lhs returned an empty set, the new dynamically allocated set would be empty, however the call to insert would insert each element from rhs' set
+
+if both returned an empty set, the returned QueryResult's set would also be empty
