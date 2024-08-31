@@ -12,6 +12,7 @@ protected:
 	virtual ~Query_base() = default;
 private:
 	virtual std::string rep() const = 0;
+	virtual QueryResult eval(const TextQuery &) const = 0;
 };
 
 #endif

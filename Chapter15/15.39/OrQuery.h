@@ -5,9 +5,8 @@
 
 class OrQuery : public BinaryQuery {
 	friend Query operator|(const Query &, const Query &);
-	OrQuery(const Query &lhs, const Query &rhs) : BinaryQuery(lhs, rhs, "|") {
-		std::cout << "OrQuery::OrQuery" << std::endl;
-	}
+	OrQuery(const Query &lhs, const Query &rhs) : BinaryQuery(lhs, rhs, "|") {}
+	QueryResult eval(const TextQuery &) const override;
 };
 
 inline Query operator|(const Query &lhs, const Query &rhs) {

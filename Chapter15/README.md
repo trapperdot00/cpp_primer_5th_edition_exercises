@@ -133,3 +133,14 @@ For the expression built in Figure 15.3 (p. 638):
 Implement the Query and Query_base classes, including a definition of rep but omitting the definition of eval.
 ## [Exercise 15.36](15.36)
 Put print statements in the constructors and rep members and run your code to check your answers to (a) and (b) from the first exercise.
+## [Exercise 15.37](15.37.txt)
+What changes would your classes need if the derived classes had members of type shared_ptr<Query_base> rather than of type Query?
+## [Exercise 15.38](15.38.txt)
+Are the following declarations legal? If not, why not? If so, explain what the declarations mean.
+```
+BinaryQuery a = Query("fiery") & Query("bird");
+AndQuery b = Query("fiery") & Query("bird");
+OrQuery c = Query("fiery") & Query("bird");
+```
+## [Exercise 15.39](15.39)
+Implement the Query and Query_base classes. Test your application by evaluating and printing a query such as the one in Figure 15.3 (p. 638).

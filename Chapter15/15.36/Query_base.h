@@ -1,7 +1,6 @@
 #ifndef QUERY_BASE_H
 #define QUERY_BASE_H
 
-#include "TextQuery.h"
 #include "QueryResult.h"
 
 #include <string>

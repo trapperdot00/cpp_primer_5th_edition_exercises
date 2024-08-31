@@ -1,0 +1,7 @@
+NotQuery:
+	we would have to change the initializer list in the constructor to dynamically allocate a new pointer using new or make_shared to initialize the shared_ptr with a pointer to the copy of the given Query
+	the rep function would have to call rep using the arrow operator rather than the dot operator
+
+BinaryQuery:
+	we would have to change the initializer list in the constructor to dynamically allocate a new pointer using new or make_shared to initialize the shared_ptr with a pointer to the copy of given Query objects
+	we would have to replace the dot operator to the arrow operator inside rep

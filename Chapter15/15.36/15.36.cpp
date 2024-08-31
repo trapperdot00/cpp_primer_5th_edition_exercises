@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "Query.h"
+#include "AllQuery.h"
 
 using std::cout;
 using std::endl;

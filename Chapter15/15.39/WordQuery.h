@@ -7,14 +7,15 @@
 class WordQuery : public Query_base {
 	friend class Query;
 
-	WordQuery(const std::string &s) : query_word(s) {
-		std::cout << "WordQuery::WordQuery" << std::endl;
-	}
+	WordQuery(const std::string &s) : query_word(s) {}
 	
 	std::string rep() const override {
-		std::cout << "WordQuery::rep" << std::endl;
 		return query_word;
 	}
+	QueryResult eval(const TextQuery &t) const override {
+		return t.query(query_word);
+	}
+
 	std::string query_word;
 };
 

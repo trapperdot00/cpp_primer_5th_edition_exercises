@@ -18,7 +18,12 @@ class Query {
 public:
 	Query(const std::string &s) : q(new WordQuery(s)) {}
 
-	std::string rep() const { return q->rep(); }
+	std::string rep() const {
+		return q->rep();
+	}
+	QueryResult eval(const TextQuery &t) const {
+		return q->eval(t);
+	}
 private:
 	Query(std::shared_ptr<Query_base> query) : q(query) {}
 

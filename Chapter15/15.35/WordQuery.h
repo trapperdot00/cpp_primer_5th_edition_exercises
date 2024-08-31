@@ -2,8 +2,6 @@
 #define WORDQUERY_H
 
 #include "Query_base.h"
-#include "Query.h"
-
 #include <string>
 
 class WordQuery : public Query_base {

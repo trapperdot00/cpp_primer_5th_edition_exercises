@@ -2,6 +2,7 @@
 #define NOTQUERY_H
 
 #include "Query.h"
+#include <cstddef>
 
 class NotQuery : public Query_base {
 	friend Query operator~(const Query &);
@@ -13,6 +14,8 @@ class NotQuery : public Query_base {
 		std::cout << "NotQuery::rep" << std::endl;
 		return "~(" + query.rep() + ")";
 	}
+	QueryResult eval(const TextQuery &) const override;
+
 	Query query;
 };
 

@@ -8,4 +8,8 @@ class OrQuery : public BinaryQuery {
 	OrQuery(const Query &lhs, const Query &rhs) : BinaryQuery(lhs, rhs, "|") {}
 };
 
+inline Query operator|(const Query &lhs, const Query &rhs) {
+	return std::shared_ptr<Query_base>(new OrQuery(lhs, rhs));
+}
+
 #endif

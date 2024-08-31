@@ -1,0 +1,7 @@
+BinaryQuery a = Query("fiery") & Query("bird");	// illegal: BinaryQuery is an abstract class which means you can't have variables of that type
+
+
+AndQuery b = Query("fiery") & Query("bird");	// illegal: expression on the right hand side of the assignment returns a Query object,
+												// AndQuery has a constructor that takes two Query objects
+
+OrQuery c = Query("fiery") & Query("bird");		// illegal: OrQuery doesn't have a constructor that takes a Query object
