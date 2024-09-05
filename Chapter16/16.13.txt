@@ -1,0 +1,3 @@
+i used a one-to-one friendship between the BlobPtr classes and the related equality and relational operator
+this estabilishes friendship between the class and the corresponding friend with the same instantiation (for example BlobPtr<int> and relational operator <int>)
+i only befriended the == operator and the < operator, the other operators define themselves in terms of these operators
