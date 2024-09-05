@@ -1,0 +1,2 @@
+all of the iterator types overload the != operator, but not all of them overload the relational operators, such as <
+by making our templates use != we allow all of the container types to use them

@@ -1,1 +1,1 @@
-there wouldn't be enough bits for eqch student on all systems, int only guarantees a minimum of 16 bits
+there wouldn't be enough bits for each student on all systems, int only guarantees a minimum of 16 bits

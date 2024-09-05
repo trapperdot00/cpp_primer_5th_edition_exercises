@@ -1,0 +1,9 @@
+a function template is essentially a blueprint that tells the compiler how to instantiate that function for each typename that it is called with
+each function template is instantiated when it is used in a program
+the compiler deduces the template arguments from the arguments of the function
+
+a class template is also essentially a blueprint on how to create classes instantiated with given types
+each instantiation of a class template is a seperate class type
+we need to pass the typename between <>s after the template class name to define an object of a template class instantiated with the typename
+the compiler can't deduce the template parameters for a class template
+

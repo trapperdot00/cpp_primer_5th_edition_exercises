@@ -1,0 +1,4 @@
+when a class template is instantiated using a list of explicit template arguments enclosed by <>, a new type-specific class is created for each typename given
+the compiler rewrites our class template so that our template parameter is replaced by the given template argument
+
+two class templates with different template arguments are two independent classes and have no relationship to each other
