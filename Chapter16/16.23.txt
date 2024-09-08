@@ -1,0 +1,1 @@
+since shared_ptrs only delete their pointed-to value when there are no users of that data, the deleter will only be called when there are no remaining users

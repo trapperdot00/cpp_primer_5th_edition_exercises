@@ -1,0 +1,11 @@
+template <typename T> class Stack {};
+void f1(Stack<char>);					// (a): function declaration, doesn't need to instantiate Stack<char>
+class Exercise {
+	Stack<double> 	&rsd;				// (b): reference to Stack<double>, doesn't need to instantiate Stack<double>
+	Stack<int>		si;					// (c): object of Stack<int>, instantiates Stack<int>
+};
+int main() {
+	Stack<char> *sc;					// (d): pointer to Stack<char>, no instantiation
+	f1(*sc);							// (e): function call, instantiates Stack<char>
+	int iObj = sizeof(Stack<string>);	// (f): instantiates Stack<string>, how would it know how big is the data?
+}

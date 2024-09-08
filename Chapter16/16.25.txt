@@ -1,0 +1,8 @@
+// template instantiation declaration
+// instantiation will not happen in the current file, but elsewhere
+// a promise to the compiler that there will be a non-extern use of this template instance
+extern template class vector<string>;
+
+// template instantiation definition
+// instantiates all members of vector<Sales_data> in the current file, including inline members
+template class vector<Sales_data>;

@@ -1,0 +1,3 @@
+there is no difference between a type parameter declared with typename or class in a template parameter list
+however when accessing template class members, that are types with the scope operator, the compiler doesn't have access to the class definition, and assumes that a member accessed throught the scope operator is not a type
+we have to explicitly tell the compiler with the keyword typename, not class that the accessed member is a type

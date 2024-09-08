@@ -1,0 +1,4 @@
+There were no need to declare the output and input operators as friends in our Screen class, as it has interface for printing and setting chars in the string
+
+The output operator calls Screen's public member function that displays its contents to a given istream
+The input operator calls Screen's public member function that sets a char in the underlying string with our given character, we additionally need to supply the row and column number.

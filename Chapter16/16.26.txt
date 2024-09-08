@@ -1,0 +1,2 @@
+No, we can not explicitly instantiate vector<NoDefault>, because there are members of vector that rely on default constructed elements
+For example, the vector constructor that takes a size_type, and default constructs as many elements as we have provided

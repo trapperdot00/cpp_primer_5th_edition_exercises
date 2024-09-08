@@ -1,0 +1,30 @@
+(a)
+	template <typename T, U, typename V> void f1(T, U, V);
+
+	// error: U is not a type, no typename or class before its name
+	// fix:
+	template <typename T, typename U, typename V> void f1(T, U, V);
+
+(b)
+	template <typename T> T f2(int &T);
+
+	// error: redeclaration of parameter T
+	// fix:
+	template <typename T> T f2(T &);
+(c)
+	inline template <typename T> T foo(T, unsigned int*);
+
+	// error: inline on the wrong place
+	// fix:
+	template <typename T> inline T foo(T, unsigned int *);
+(d)
+	template <typename T> f4(T, T);
+
+	// error: no return type
+	// fix:
+	template <typename T> void f4(T, T);
+(e)
+	typedef char Ctype;
+	template <typename Ctype> Ctype f5(Ctype a);
+
+	// legal: hides outside alias to char, Ctype is a type that will be deduced from the argument passed to f5 inside f5
