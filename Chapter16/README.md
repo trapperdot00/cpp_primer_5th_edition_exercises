@@ -94,3 +94,46 @@ int main() {
 ```
 ## [Exercise 16.28](16.28)
 Write your own versions of shared_ptr and unique_ptr.
+## [Exercise 16.29](16.29)
+Revise your Blob class to use your version of shared_ptr rather than the library version.
+## [Exercise 16.30](16.30)
+Rerun some of your programs to verify your shared_ptr and revised Blob classes. (Note: Implementing the weak_ptr type is beyond the scope of this Primer, so you will not be able to use the BlobPtr class with your revised Blob.)
+## [Exercise 16.31](16.31.txt)
+Explain how the compiler might inline the call to the deleter if we used DebugDelete with unique_ptr.
+## [Exercise 16.32](16.32.txt)
+What happens during template argument deduction?
+## [Exercise 16.33](16.33.txt)
+Name two type conversions allowed on function arguments involved in template argument deduction.
+## [Exercise 16.34](16.34.txt)
+Given only the following code, explain whether each of these calls is legal. If so, what is the type of T? If not, why not?
+```
+template <class T> int compare(const T&, const T&);
+(a) compare("hi", "world"); (b) compare("bye", "dad");
+```
+## [Exercise 16.35](16.35.txt)
+Which, if any, of the following calls are errors? If the call is legal, what is the type of T? If the call is not legal, what is the problem?
+```
+template <typename T> T calc(T, int);
+template <typename T> T fcn(T, T);
+double d;
+float f;
+char c;
+(a) calc(c, ’c’);
+(b) calc(d, f);
+(c) fcn(c, ’c’);
+(d) fcn(d, f);
+```
+## [Exercise 16.36](16.36.txt)
+What happens in the following calls:
+```
+template <typename T> f1(T, T);
+template <typename T1, typename T2) f2(T1, T2);
+int i = 0, j = 42, *p1 = &i, *p2 = &j;
+const int *cp1 = &i, *cp2 = &j;
+(a) f1(p1, p2);
+(b) f2(p1, p2);
+(c) f1(cp1, cp2);
+(d) f2(cp1, cp2);
+(e) f1(p1, cp1);
+(f) f2(p1, cp1);
+```

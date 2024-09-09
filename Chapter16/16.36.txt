@@ -1,0 +1,31 @@
+template <typename T> void f1(T, T);
+template <typename T1, typename T2) void f2(T1, T2);
+
+int i = 0, j = 42, *p1 = &i, *p2 = &j;
+const int *cp1 = &i, *cp2 = &j;
+
+a) f1(p1, p2);
+// T has type int *
+
+b) f2(p1, p2);
+// T1 and T2 has type int *
+
+c) f1(cp1, cp2);
+// low-level const not ignored!
+// T has type const int *
+
+d) f2(cp1, cp2);
+// low-level const not ignored!
+// T1 and T2 has type const int *
+
+e) f1(p1, cp1);
+// error: types differ -> low-level const not ignored
+
+// first argument has type int *
+// second argument has type const int *
+// no automatic conversion to a common type, 
+	// only top-level const conversion and function/array to pointer
+
+f) f2(p1, cp1);
+// T1 has type int *
+// T2 has type const int *

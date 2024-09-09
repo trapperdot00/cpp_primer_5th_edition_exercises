@@ -1,0 +1,15 @@
+template <class T> int compare(const T&, const T&);
+
+a) compare("hi", "world");
+
+// the first argument has type: const char[3]
+// second has type: const char[6]
+// mismatched types for function arguments using the same template parameter type
+
+// because the function parameter is a reference type,
+// the array can't be converted to a common type of const char *
+// illegal
+
+b) compare("bye", "dad");
+
+// legal: both argument has type const char[4]

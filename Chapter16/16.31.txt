@@ -1,0 +1,5 @@
+by making the deleter unique_ptr's type, the deleter is known at compile time
+the deleter is stored directly in a unique_ptr object
+the call to the deleter is a direct call, opposed to the shared_ptr's indirect deleter call
+
+the compiler might inline the call to DebugDelete with the ostream output expression, and the delete call

@@ -1,0 +1,4 @@
+the two type conversions allowed on function arguments involved in template argument deduction are:
+
+'reference' to 'const reference type', or 'pointer' to 'pointer to const', const conversion
+array/function to pointer type, if the function parameter is not a reference type

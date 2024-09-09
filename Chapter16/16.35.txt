@@ -1,0 +1,32 @@
+template <typename T> T calc(T, int);
+template <typename T> T fcn(T, T);
+double d;
+float f;
+char c;
+
+a) calc(c, 'c');
+// legal
+// T's type is deduced by the first parameter:
+// T is a char
+
+// 'c' is promoted to int as a conversion to an ordinary int type
+
+b) calc(d, f);
+// legal
+// T is a double
+
+// in the second argument float is converted to an int
+
+
+c) fcn(c, 'c');
+// legal
+// arguments to the function are: char, const char
+// top-level const is ignored of the second argument
+// T is a char
+
+d) fcn(d, f);
+// error:
+// type mismatch
+// only two automatic conversions exist for arguments to function parameters that are template types:
+// const conversion, and array or function to pointer conversion
+// double and float can't be converted to a common type with these conversions
