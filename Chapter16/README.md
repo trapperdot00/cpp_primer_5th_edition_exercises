@@ -137,3 +137,39 @@ const int *cp1 = &i, *cp2 = &j;
 (e) f1(p1, cp1);
 (f) f2(p1, cp1);
 ```
+## [Exercise 16.37](16.37.txt)
+The library max function has two function parameters and returns the larger of its arguments. This function has one template type parameter. Could you call max passing it an int and a double? If so, how? If not, why not?
+## [Exercise 16.38](16.38.txt)
+When we call make_shared (§ 12.1.1, p. 451), we have to provide an explicit template argument. Explain why that argument is needed and how it is used.
+## [Exercise 16.39](16.39)
+Use an explicit template argument to make it sensible to pass two string literals to the original version of compare from § 16.1.1 (p. 652).
+## [Exercise 16.40](16.40.txt)
+Is the following function legal? If not, why not? If it is legal, what, if any, are the restrictions on the argument type(s) that can be passed, and what is the return type?
+```
+template <typename It>
+auto fcn3(It beg, It end) -> decltype(*beg + 0)
+{
+    // process the range
+    return *beg; // return a copy of an element from the range
+}
+```
+## [Exercise 16.41](16.41)
+Write a version of sum with a return type that is guaranteed to be large enough to hold the result of the addition.
+## [Exercise 16.42](16.42.txt)
+Determine the type of T and of val in each of the following calls:
+```
+template <typename T> void g(T&& val);
+int i = 0; const int ci = i;
+(a) g(i);
+(b) g(ci);
+(c) g(i * ci);
+```
+## [Exercise 16.43](16.43.txt)
+Using the function defined in the previous exercise, what would the template parameter of g be if we called g(i = ci)?
+## [Exercise 16.44](16.44.txt)
+Using the same three calls as in the first exercise, determine the types for T if g’s function parameter is declared as T (not T&&). What if g’s function parameter is const T&?
+## [Exercise 16.45](16.45.txt)
+Given the following template, explain what happens if we call g on a literal value such as 42. What if we call g on a variable of type int?
+```
+template <typename T> void g(T&& val) { vector<T> v; }
+```
