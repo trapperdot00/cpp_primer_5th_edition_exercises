@@ -1,0 +1,6 @@
+template <typename T> void g(T&& val);
+
+g(i = ci);
+// assignment returns an lvalue reference to the left-hand operand
+// T is an int &
+// int & && collapses -> val is an int &

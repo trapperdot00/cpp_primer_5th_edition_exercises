@@ -1,0 +1,26 @@
+T:
+(a)	g(i);
+// T is int
+// val is int
+
+(b)	g(ci);
+// T is int
+// val is int
+
+(c)	g(i * ci);
+// T is int
+// val is int
+
+
+const T&:		// T won't have const, as const is already a part of the function parameter
+(a)	g(i);
+// T is int
+// val is const int &
+
+(b)	g(ci);
+// T is int
+// val is const int &
+
+(c)	g(i * ci);
+// T is int
+// val is const int &

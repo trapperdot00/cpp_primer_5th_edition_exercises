@@ -1,0 +1,4 @@
+if we provide and explicit template argument with the function call, we can call max with an int and a double
+example:
+	double res1 = std::max<double>(5, 5.5);	// return type is double, both arguments are converted to double
+	int res2 = std::max<int>(5, 5.5);		// return type is int, both arguments are converted to int -> loses precision

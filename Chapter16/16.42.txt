@@ -1,0 +1,19 @@
+// T can bind to rvalues and lvalues
+
+template <typename T> void g(T&& val);
+int i = 0; const int ci = i;
+
+(a)	g(i);
+// i is an lvalue -> T is an int &
+// int & && collapses to int & -> val is an int &
+
+(b)	g(ci);
+// since there is no const preceding T&&, T will have the const id
+// ci is an lvalue -> T is a const int &
+// const int & && collapses to const int &
+// val is a const int &
+
+(c)	g(i * ci);
+// i * ci is an expression which yields an rvalue
+// T is an int
+// val is an int &&

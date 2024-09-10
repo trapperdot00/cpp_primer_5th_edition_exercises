@@ -1,0 +1,18 @@
+template <typename It>
+auto fcn3(It beg, It end) -> decltype(*beg + 0)
+{
+	return *beg;
+}
+
+// the function is legal
+
+// the arguments' types must match
+// the arguments must provide the dereference operator
+// the types pointed by the arguments must provide the addition operator with an integer
+// the arguments ideally should be iterators
+
+// fcn3's return type is determined by decltype
+// the expression in decltype returns a type, that is returned
+// when dereferencing the provided iterator(s)
+// the function's return type is not a reference, because
+// the expression in decltype yields a plain type

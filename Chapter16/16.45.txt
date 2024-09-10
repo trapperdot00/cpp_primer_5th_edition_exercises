@@ -1,0 +1,14 @@
+template <typename T> void g(T&& val) { vector<T> v; }
+int i = 2;
+
+g(42);
+// 42 is an rvalue
+// T is int
+// val is int &&
+// vector instantiated with an int
+
+g(i);
+// i is an lvalue
+// T is an int &
+// val is (int & &&) collapses -> int &
+// error: vector cannot be instantiated with lvalue reference types
