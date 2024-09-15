@@ -1,0 +1,19 @@
+// s is an std::string
+
+svec.emplace_back(s)
+
+// emplace_back takes zero or more rvalue references to template types
+// s is an lvalue
+// the function- and template parameter pack will have a size of 1
+// the first and only template parameter will have a type of std::string &
+// the function parameter will be std::string& &&
+// through reference collapsing, the overall type of the parameter will be an std::string &
+
+// chk_n_alloc function is called to ensure there is enough space for at least one more elements
+
+// the std::allocator<string>::construct member constructs a new element to raw, uninitialized memory
+// std::forward is called for each (now only for one) passed parameters in the pack
+// std::forward<Args>(args)... is expanded to std::forward<string &>(s) to ensure we keep the original type
+// construct is called with an lvalue reference to s
+// construct calls std::string's constructor that takes an std::string, AKA the copy constructor
+// a copy of s is constructed as a new element in the back of the StrVec

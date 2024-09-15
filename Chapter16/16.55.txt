@@ -1,0 +1,22 @@
+if we were to call print(os, 1, 2, 3, 4), and our nonvariadic version of print
+ was declared after the variadic version's definition:
+
+1:	print(os, 1, 2, 3, 4)
+	t is 1,
+	rest is 2, 3, 4
+
+2:	print(os, 2, 3, 4)
+	t is 2
+	rest is 3, 4
+
+3:	print(os, 3, 4)
+	t is 3
+	rest is 4
+
+4:	print(os, 4)
+	t is 4
+	rest is empty
+
+5:	print(os)	-> error, no argument for t!
+
+

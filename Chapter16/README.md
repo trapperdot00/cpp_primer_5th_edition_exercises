@@ -173,3 +173,55 @@ Given the following template, explain what happens if we call g on a literal val
 ```
 template <typename T> void g(T&& val) { vector<T> v; }
 ```
+## [Exercise 16.46](16.46.txt)
+Explain this loop from StrVec::reallocate in § 13.5 (p. 530):
+```
+for (size_t i = 0; i != size(); ++i)
+    alloc.construct(dest++, std::move(*elem++));
+```
+## [Exercise 16.47](16.47)
+Write your own version of the flip function and test it by calling functions that have lvalue and rvalue reference parameters.
+## [Exercise 16.48](16.48)
+Write your own versions of the debug_rep functions.
+## [Exercise 16.49](16.49.txt)
+Explain what happens in each of the following calls:
+```
+template <typename T> void f(T);
+template <typename T> void f(const T*);
+template <typename T> void g(T);
+template <typename T> void g(T*);
+int i = 42, *p = &i;
+const int ci = 0, *p2 = &ci;
+g(42);
+g(p);
+g(ci);
+g(p2);
+f(42);
+f(p);
+f(ci);
+f(p2);
+```
+## [Exercise 16.50](16.50.cpp)
+Define the functions from the previous exercise so that they print an identifying message. Run the code from that exercise. If the calls behave differently from what you expected, make sure you understand why.
+## [Exercise 16.51](16.51.txt)
+Determine what sizeof...(Args) and sizeof...(rest) return for each call to foo in this section.
+## [Exercise 16.52](16.52.cpp)
+Write a program to check your answer to the previous question.
+## [Exercise 16.53](16.53)
+Write your own version of the print functions and test them by printing one, two, and five arguments, each of which should have different types.
+## [Exercise 16.54](16.54)
+What happens if we call print on a type that doesn’t have an << operator?
+## [Exercise 16.55](16.55.txt)
+Explain how the variadic version of print would execute if we declared the nonvariadic version of print after the definition of the variadic version.
+## [Exercise 16.56](16.56)
+Write and test a variadic version of errorMsg.
+## [Exercise 16.57](16.57.txt)
+Compare your variadic version of errorMsg to the error_msg function in § 6.2.6 (p. 220). What are the advantages and disadvantages of each approach?
+## [Exercise 16.58](16.58)
+Write the emplace_back function for your StrVec class and for the Vec class that you wrote for the exercises in § 16.1.2 (p. 668).
+## [Exercise 16.59](16.59.txt)
+Assuming s is a string, explain svec.emplace_back(s).
+## [Exercise 16.60](16.60.txt)
+Explain how make_shared (§ 12.1.1, p. 451) works.
+## [Exercise 16.61](16.61)
+Define your own version of make_shared.

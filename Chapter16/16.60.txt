@@ -1,0 +1,8 @@
+make_shared works similarly as emplace_back
+it constructs a new element on the heap/dynamically, and returns a shared_ptr pointing to it
+
+make_shared is a variadic template function, takes any number of arguments of any type
+since the compiler can not deduce the type of the element we are constructing, we need to provide an explicit template argument list for the type to construct
+the function calls that type's constructor, forwarding all of our arguments with std::forward, to preserve the arguments' original types
+after the construction is done, it calls shared_ptr's constructor, that takes a raw pointer, and returns that shared_ptr to the call location
+that shared_ptr's use_count is set initially to 1

@@ -1,0 +1,1 @@
+the variadic errorMsg takes a varying number of types and a varying number of values, while the nonvariadic version only takes a varying number of values, all values must be of the same type

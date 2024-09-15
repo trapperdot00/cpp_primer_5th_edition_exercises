@@ -1,0 +1,32 @@
+template <typename T> void f(T);
+template <typename T> void f(const T*);
+template <typename T> void g(T);
+template <typename T> void g(T*);
+int i = 42, *p = &i;
+const int ci = 0, *p2 = &ci;
+
+g(42);
+	// calls g(T), 42 can't be converted to a pointer
+	// template parameter: int
+g(p);
+	// calls g(T*), as it is more specialized than g(T)
+	// template parameter: int; pointer specified in function parameter
+g(ci);
+	// calls g(T), top level const is ignored, passed by value
+	// template parameter: int
+g(p2);
+	// calls g(T*)
+	// template parameter: const int; pointer specified in function parameter
+
+f(42);
+	// calls f(T), no conversion to pointer to const from 42
+	// template parameter: int
+f(p);
+	// calls f(T), not f(const T*) as it requires a const conversion
+	// template parameter: int *
+f(ci);
+	// calls f(T), top level const is ignored, passed by value
+	// template parameter: int
+f(p2);
+	// calls f(const T*)
+	// template parameter: int; pointer and const specified in function parameter
