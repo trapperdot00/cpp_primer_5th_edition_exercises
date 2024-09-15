@@ -1,0 +1,9 @@
+for (size_t i = 0; i != size(); ++i)
+	alloc.construct(dest++, std::move(*elem++));
+
+// the loop iterates over constructed memory in an StrVec object,
+// and constructs new elements from the rvalues returned from
+// std::move. the allocator's construct member likely has an overload
+// where it takes a rvalue reference as its second parameter,
+// and that moves the given element to the specified memory address,
+// and deleting and/or nullifying the modifiable rvalue's data members
