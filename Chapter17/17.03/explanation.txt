@@ -1,0 +1,4 @@
+i really felt like a web developer writing this mess of a code
+i guess it is working
+using the QueryResult class is definitely a better option
+the typedef is necessary to make the code readable
