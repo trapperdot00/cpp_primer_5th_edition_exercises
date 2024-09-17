@@ -1,0 +1,8 @@
+I liked the version I wrote for exercise 17.6 the best, because it doesn't need a constant expression
+to index the contained elements like in an std::tuple, and it didn't need such ugly code as in
+the nested std::pairs
+I like the fact that I can easily make a class type for this specific use case, and I can tune its
+interface to my liking
+
+I think std::tuple is still passable, as it is a standard library container, they surely know what they
+were doing

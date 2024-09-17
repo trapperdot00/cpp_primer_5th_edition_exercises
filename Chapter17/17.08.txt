@@ -1,0 +1,2 @@
+if we passed Sales_data() instead of Sales_data(s) in the accumulate algorithm, then we wouldn't have a bookNo
+for the summed books, addition only changes units_sold and revenue, bookNo would remain empty

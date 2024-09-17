@@ -1,0 +1,9 @@
+Book1 1 1
+Book2 1 1
+Book8 1 5
+Book8 2 5
+Book9 10 2
+Book9 20 1
+Book10 5 3
+Book10 10 1.5
+Book11 9 5
