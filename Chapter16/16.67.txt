@@ -1,0 +1,2 @@
+specializations affect function matching, but are worth less than overloaded functions
+the compiler will resolve a call to a general template function and will select the specialized version of the function if applicable

@@ -225,3 +225,15 @@ Assuming s is a string, explain svec.emplace_back(s).
 Explain how make_shared (§ 12.1.1, p. 451) works.
 ## [Exercise 16.61](16.61)
 Define your own version of make_shared.
+## [Exercise 16.62](16.62)
+Define your own version of hash<Sales_data> and define an unordered_multiset of Sales_data objects. Put several transactions into the container and print its contents.
+## [Exercise 16.63](16.63)
+Define a function template to count the number of occurrences of a given value in a vector. Test your program by passing it a vector of doubles, a vector of ints, and a vector of strings.
+## [Exercise 16.64](16.64)
+Write a specialized version of the template from the previous exercise to handle vector<const char*> and a program that uses this specialization.
+## [Exercise 16.65](16.65)
+In § 16.3 (p. 698) we defined overloaded two versions of debug_rep one had a const char* and the other a char* parameter. Rewrite these functions as specializations.
+## [Exercise 16.66](16.66.txt)
+What are the advantages and disadvantages of overloading these debug_rep functions as compared to defining specializations?
+## [Exercise 16.67](16.67.txt)
+Would defining these specializations affect function matching for debug_rep? If so, how? If not, why not?
