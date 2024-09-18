@@ -15,6 +15,7 @@ public:
 private:
 	std::size_t prevChapter() const;
 
+	// Chapter to generate entries to (upper bound inclusive)
 	std::size_t chapterNum;
 };
 
