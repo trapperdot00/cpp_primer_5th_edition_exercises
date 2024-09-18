@@ -15,3 +15,16 @@ Rewrite findBook so that it does not use tuple or pair.
 Explain which version of findBook you prefer and why.
 ## [Exercise 17.8](17.08.txt)
 What would happen if we passed Sales_data() as the third parameter to accumulate in the last code example in this section?
+## [Exercise 17.9](17.09.txt)
+Explain the bit pattern each of the following bitset objects contains:
+```
+(a) bitset<64> bitvec(32);
+(b) bitset<32> bv(1010101);
+(c) string bstr; cin >> bstr; bitset<8>bv(bstr);
+```
+## [Exercise 17.10](17.10.cpp)
+Using the sequence 1, 2, 3, 5, 8, 13, 21, initialize a bitset that has a 1 bit in each position corresponding to a number in this sequence. Default initialize another bitset and write a small program to turn on each of the appropriate bits.
+## [Exercise 17.11](17.11.cpp)
+Define a data structure that contains an integral object to track responses to a true/false quiz containing 10 questions. What changes, if any, would you need to make in your data structure if the quiz had 100 questions?
+## [Exercise 17.12](17.12.cpp)
+Using the data structure from the previous question, write a function that takes a question number and a value to indicate a true/false answer and updates the quiz results accordingly.

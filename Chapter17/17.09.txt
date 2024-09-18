@@ -1,0 +1,19 @@
+(a)	bitset<64> bitvec(32);
+// 32 (int) is converted to unsigned long long
+// 32 in binary: 0..00100000
+// bitvec contains 63 zeroes, except for bit 5, which is the only one
+
+(b)	bitset<32> bv(1010101);
+// 1010101 is an int, not a binary bit sequence, converted to unsigned long long
+// 1010101 in binary: 0..011110110100110110101
+// bv contains this sequence: 00000000 00001111 01101001 10110101
+// where the low order bits are on the right
+
+(c)	string bstr; cin >> bstr; bitset<8> bv(bstr);
+// bstr is a string, whose value is set by the standard input
+// if bstr contains characters other than '0' and '1', then invalid_argument is thrown
+// else bv contains a bit sequence where the string's character with the highest subscript is the lowest order bit, and so on
+// if the string has less than 8 characters, then the missing high order bits will be filled with 0s
+// if the string has more characters than 8, then the high order bits get discarded
+// for example: "10" -> s[0]: 1; s[1]: 0
+// but with bitsets: lowest order bit: 0
