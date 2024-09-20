@@ -1,8 +1,7 @@
 #include "RootReadme.h"
 
 // Returns the last chapter's number in the readme file
-std::size_t RootReadme::prevChapter() const {
-	std::string filename = "README.md";
+std::size_t RootReadme::existing() const {
 	std::ifstream in(filename);
 	std::size_t existingCh = 0;
 	for (std::string line; std::getline(in, line); ) {
@@ -15,9 +14,9 @@ std::size_t RootReadme::prevChapter() const {
 // Fetches descriptions from each chapter's root directory
 std::string RootReadme::generate() const {
 	std::string additionalLines;
-	std::size_t existing = prevChapter();
-	std::cout << existing << " chapters found" << std::endl;
-	for (std::size_t curr = existing; curr != chapterNum; ++curr) {
+	std::size_t prev = existing();
+	std::cout << prev << " chapters found" << std::endl;
+	for (std::size_t curr = prev; curr != chapterNum; ++curr) {
 			std::ostringstream descPath;
 			descPath << "Chapter" << (curr + 1 < 10 ? "0" : "")
 					 << curr + 1 << "/description.txt";

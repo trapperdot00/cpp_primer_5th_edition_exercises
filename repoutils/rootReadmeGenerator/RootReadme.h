@@ -1,22 +1,19 @@
 #ifndef ROOTREADME_H
 #define ROOTREADME_H
 
-#include <cstddef>
-#include <string>
+#include "../GeneratorBase.h"
+
 #include <iostream>
 #include <fstream>
 #include <sstream>
 
-class RootReadme {
+class RootReadme : public GeneratorBase {
 public:
-	RootReadme(std::size_t i) : chapterNum(i) {}
-
-	std::string generate() const;
+	RootReadme(std::size_t i) : GeneratorBase(i) {}
+	
+	std::string generate() const override;
 private:
-	std::size_t prevChapter() const;
-
-	// Chapter to generate entries to (upper bound inclusive)
-	std::size_t chapterNum;
+	std::size_t existing() const override;
 };
 
 #endif
