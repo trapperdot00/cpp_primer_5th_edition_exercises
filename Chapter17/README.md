@@ -28,3 +28,11 @@ Using the sequence 1, 2, 3, 5, 8, 13, 21, initialize a bitset that has a 1 bit i
 Define a data structure that contains an integral object to track responses to a true/false quiz containing 10 questions. What changes, if any, would you need to make in your data structure if the quiz had 100 questions?
 ## [Exercise 17.12](17.12.cpp)
 Using the data structure from the previous question, write a function that takes a question number and a value to indicate a true/false answer and updates the quiz results accordingly.
+## [Exercise 17.13](17.13.cpp)
+Write an integral object that contains the correct answers for the true/false quiz. Use it to generate grades on the quiz for the data structure from the previous two exercises.
+## [Exercise 17.14](17.14)
+Write several regular expressions designed to trigger various errors. Run your program to see what output your compiler generates for each error.
+## [Exercise 17.15](17.15.cpp)
+Write a program using the pattern that finds words that violate the “i before e except after c” rule. Have your program prompt the user to supply a word and indicate whether the word is okay or not. Test your program with words that do and do not violate the rule.
+## [Exercise 17.16](17.16.cpp)
+What would happen if your regex object in the previous program were initialized with "[^c]ei"? Test your program using that pattern to see whether your expectations were correct.
