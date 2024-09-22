@@ -36,3 +36,7 @@ Write several regular expressions designed to trigger various errors. Run your p
 Write a program using the pattern that finds words that violate the “i before e except after c” rule. Have your program prompt the user to supply a word and indicate whether the word is okay or not. Test your program with words that do and do not violate the rule.
 ## [Exercise 17.16](17.16.cpp)
 What would happen if your regex object in the previous program were initialized with "[^c]ei"? Test your program using that pattern to see whether your expectations were correct.
+## [Exercise 17.17](17.17)
+Update your program so that it finds all the words in an input sequence that violiate the “ei” grammar rule.
+## [Exercise 17.18](17.18)
+Revise your program to ignore words that contain “ei” but are not misspellings, such as “albeit” and “neighbor.”
