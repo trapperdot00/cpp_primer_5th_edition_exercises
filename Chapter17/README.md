@@ -40,3 +40,21 @@ What would happen if your regex object in the previous program were initialized 
 Update your program so that it finds all the words in an input sequence that violiate the “ei” grammar rule.
 ## [Exercise 17.18](17.18)
 Revise your program to ignore words that contain “ei” but are not misspellings, such as “albeit” and “neighbor.”
+## [Exercise 17.19](17.19.txt)
+Why is it okay to call m[4].str() without first checking whether m[4] was matched?
+## [Exercise 17.20](17.20)
+Write your own version of the program to validate phone numbers.
+## [Exercise 17.21](17.21)
+Rewrite your phone number program from § 8.3.2 (p. 323) to use the valid function defined in this section.
+## [Exercise 17.22](17.22)
+Rewrite your phone program so that it allows any number of whitespace characters to separate the three parts of a phone number.
+## [Exercise 17.23](17.23)
+Write a regular expression to find zip codes. A zip code can have five or nine digits. The first five digits can be separated from the remaining four by a dash.
+## [Exercise 17.24](17.24)
+Write your own version of the program to reformat phone numbers.
+## [Exercise 17.25](17.25)
+Rewrite your phone program so that it writes only the ﬁrst phone number for each person.
+## [Exercise 17.26](17.26)
+Rewrite your phone program so that it writes only the second and subsequent phone numbers for people with more than one phone number.
+## [Exercise 17.27](17.27)
+Write a program that reformats a nine-digit zip code as ddddd-dddd.

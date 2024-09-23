@@ -1,0 +1,1 @@
+Because if a ssub_match, csub_match, wssub_match or a wcsub_match object isn't matched, then the .str() member function returns an empty string
