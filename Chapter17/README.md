@@ -58,3 +58,9 @@ Rewrite your phone program so that it writes only the ﬁrst phone number for ea
 Rewrite your phone program so that it writes only the second and subsequent phone numbers for people with more than one phone number.
 ## [Exercise 17.27](17.27)
 Write a program that reformats a nine-digit zip code as ddddd-dddd.
+## [Exercise 17.28](17.28.cpp)
+Write a function that generates and returns a uniformly distributed random unsigned int each time it is called.
+## [Exercise 17.29](17.29.cpp)
+Allow the user to supply a seed as an optional argument to the function you wrote in the previous exercise.
+## [Exercise 17.30](17.30.cpp)
+Revise your function again this time to take a minimum and maximum value for the numbers that the function should return.
