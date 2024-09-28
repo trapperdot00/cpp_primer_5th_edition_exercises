@@ -1,0 +1,2 @@
+if we defined resp inside the loop, we wouldn't be able to use it in the
+do while's header, as it would be out of scope

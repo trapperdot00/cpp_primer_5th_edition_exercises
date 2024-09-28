@@ -1,0 +1,3 @@
+since random number engines and distributions are class objects and have state,
+and the engine classes generate the same sequence each time they are initialized,
+on each play, the same side would go first
