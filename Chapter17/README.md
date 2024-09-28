@@ -64,3 +64,15 @@ Write a function that generates and returns a uniformly distributed random unsig
 Allow the user to supply a seed as an optional argument to the function you wrote in the previous exercise.
 ## [Exercise 17.30](17.30.cpp)
 Revise your function again this time to take a minimum and maximum value for the numbers that the function should return.
+## [Exercise 17.31](17.31.txt)
+What would happen if we defined b and e inside the do loop of the game-playing program from this section?
+## [Exercise 17.32](17.32.txt)
+What would happen if we defined resp inside the loop?
+## [Exercise 17.33](17.33)
+Write a version of the word transformation program from § 11.3.6 (p. 440) that allows multiple transformations for a given word and randomly selects which transformation to apply.
+## [Exercise 17.34](17.34.cpp)
+Write a program that illustrates the use of each manipulator in Tables 17.17 (p. 757) and 17.18.
+## [Exercise 17.35](17.35.cpp)
+Write a version of the program from page 758, that printed the square root of 2 but this time print hexadecimal digits in uppercase.
+## [Exercise 17.36](17.36.cpp)
+Modify the program from the previous exercise to print the various floating-point values so that they line up in a column.
