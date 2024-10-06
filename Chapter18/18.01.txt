@@ -1,0 +1,15 @@
+a)	range_error r("error")
+	throw r;
+
+// r is a range_error
+
+b)	exception *p = &r;
+	throw *p;
+
+// p is an exception, if r is derived from exception, the thrown object
+// is sliced to only the base (exception) part
+
+// if throw were to throw the pointer instead of the pointed value
+// in b), no slicing would happen, but we must make sure that
+// it doesn't point to any local objects, that would get destroyed
+// during stack unwinding

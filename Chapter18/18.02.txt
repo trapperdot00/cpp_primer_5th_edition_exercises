@@ -1,0 +1,14 @@
+void exercise(int *b, int *e)
+{
+	vector<int> v(b, e);
+	int *p = new int[v.size()];
+	ifstream in("ints");
+	// exception occurs here
+}
+
+// if exception were to happen at the indicated location,
+// the dynamic memory pointed to by p would be lost, as
+// the compiler does no work to destroy built-in types
+// the vector's and ifstream's destructors however would
+// be ran, because destructors of class types are called
+// when exiting a function due to an exception throw

@@ -1,0 +1,2 @@
+1:	Catch exception in function, and delete the dynamic memory manually (weird)
+2:	Use smart pointers
