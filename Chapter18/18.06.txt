@@ -1,0 +1,18 @@
+a)	class exceptionType { };
+	catch(exceptionType *pet) {}
+
+	// 1: if e is not a local object
+	// exceptionType e;
+	// throw &e;
+
+	// 2: creating a new object on the heap, needs to be deleted afterwards
+	// throw new exceptionType;
+
+b)	catch(...) { }
+
+	// throw std::runtime_error("err");
+
+c)	typedef int EXCPTYPE;
+	catch (EXCPTYPE);
+
+	// throw 13;

@@ -1,0 +1,26 @@
+try {
+
+} catch (exception) {
+
+} catch (const runtime_error &re) {
+
+} catch (overflow_error eobj) { /* ... */ }
+
+// Catch clauses with types related by inheritance
+// must be ordered from most derived to least derived
+
+// (A catch that takes a type related by inheritance
+// should take a reference parameter to avoid slicing down)
+
+// fix:
+
+try {
+
+} catch (overflow_error eobj) {
+	// assuming eobj is modified inside the catch clause,
+	// that should remain local: takes nonreference
+} catch (const runtime_error &re) {
+
+} catch (exception) {
+	// no parameter name: assuming the exception is not used
+}
