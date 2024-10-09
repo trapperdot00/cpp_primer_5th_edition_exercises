@@ -51,3 +51,7 @@ Given the following exception types and catch clauses, write a throw expression 
 ```
 ## [Exercise 18.7](18.07)
 Define your Blob and BlobPtr classes from Chapter 16 to use function try blocks for their constructors.
+## [Exercise 18.8](18.08)
+Review the classes you’ve written and add appropriate exception specifications to their constructors and destructors. If you think one of your destructors might throw, change the code so that it cannot throw.
+## [Exercise 18.9](18.09)
+Define the bookstore exception classes described in this section and rewrite your Sales_data compound assigment operator to throw an exception.
