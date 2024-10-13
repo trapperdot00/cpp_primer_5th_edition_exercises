@@ -1,0 +1,3 @@
+it is important that the exception class' what member doesn't throw, because it
+prevents exiting the error handling catch clause accidentally, terminating
+the program if there isn't another catch clause for handling that exception
