@@ -59,3 +59,5 @@ Define the bookstore exception classes described in this section and rewrite you
 Write a program that uses the Sales_data addition operator on objects that have differing ISBN s. Write two versions of the program: one that handles the exception and one that does not. Compare the behavior of the programs so that you become familiar with what happens when an uncaught exception occurs.
 ## [Exercise 18.11](18.11.txt)
 Why is it important that the what function doesn’t throw?
+## [Exercise 18.12](18.12)
+Organize the programs you have written to answer the questions in each chapter into their own namespaces. That is, namespace chapter15 would contain code for the Query programs and chapter10 would contain the TextQuery code. Using this structure, compile the Query code examples.
