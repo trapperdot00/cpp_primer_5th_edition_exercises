@@ -1,0 +1,2 @@
+when needing variables that don't span multiple files and have a static lifetime
+or declaring file statics

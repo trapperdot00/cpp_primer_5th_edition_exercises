@@ -1,0 +1,93 @@
+			-- using declarations --
+a)
+namespace Exercise {
+	int ivar = 0;
+	double dvar = 0;
+	const int limit = 1000;
+}
+
+int ivar = 0;
+using Exercise::ivar;
+using Exercise::dvar;
+using Exercise::limit;
+void manip() {
+	double dvar = 3.1416;
+	int iobj = limit + 1;
+	++ivar;
+	++::ivar;
+}
+// using declaration of Exercise::ivar is an error, can't declare an alias
+// with the same name as ivar, as it is in the current scope
+// dvar and limit is added to the global scope as a local alias from the Exercise namespace
+// manip declares a variable named dvar, that hides the outer scope's dvar
+// iobj is initialized to Exercise::limit + 1
+// if we removed the erroneous using declaration, both incrementing of ivar would increment
+// the global one
+
+b)
+namespace Exercise {
+	int ivar = 0;
+	double dvar = 0;
+	const int limit = 1000;
+}
+
+int ivar = 0;
+void manip() {
+	using Exercise::ivar;
+	using Exercise::dvar;
+	using Exercise::limit;
+	double dvar = 3.1416;
+	int iobj = limit + 1;
+	++ivar;
+	++::ivar;
+}
+// ivar, dvar and limit from the namespace Exercise is put into manip as a local alias
+// the declaration of ivar hides the global ivar inside the manip function
+// the declaration of dvar after the using declaration of Exercise::dvar would be an error
+// ++ivar increments Exercise::ivar
+// ++::ivar increments ivar in the global scope
+
+			-- using directive --
+a)
+namespace Exercise {
+	int ivar = 0;
+	double dvar = 0;
+	const int limit = 1000;
+}
+
+int ivar = 0;
+using namespace Exercise;
+void manip() {
+	double dvar = 3.1416;
+	int iobj = limit + 1;
+	++ivar;
+	++::ivar;
+}
+// using directive lifts Exercise's members in the nearest scope that contains Exercise and the directive:
+// into the global scope
+// clash between ::ivar and Exercise::ivar, detected only if ivar is used
+// declaration of dvar inside manip hides the dvar inside the global scope
+// ++ivar is ambiguous: global ivar, or Exercise::ivar?
+// ++::ivar increments the global ivar (::ivar is a qualified name)
+
+b)
+namespace Exercise {
+	int ivar = 0;
+	double dvar = 0;
+	const int limit = 1000;
+}
+
+int ivar = 0;
+void manip() {
+	using namespace Exercise;
+	double dvar = 3.1416;
+	int iobj = limit + 1;
+	++ivar;
+	++::ivar;
+}
+// using directive lifts Exercise's members in the nearest scope that contains Exercise and the directive:
+// into the global scope
+// clash between ::ivar and Exercise::ivar, detected only if ivar is used
+// declaration of dvar inside manip hides the dvar inside the global scope
+// ++ivar is ambiguous: global ivar or Exercise::ivar?
+// ++::ivar increments the global ivar (::ivar is a qualified name)

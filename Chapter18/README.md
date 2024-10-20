@@ -61,3 +61,44 @@ Write a program that uses the Sales_data addition operator on objects that have 
 Why is it important that the what function doesn’t throw?
 ## [Exercise 18.12](18.12)
 Organize the programs you have written to answer the questions in each chapter into their own namespaces. That is, namespace chapter15 would contain code for the Query programs and chapter10 would contain the TextQuery code. Using this structure, compile the Query code examples.
+## [Exercise 18.13](18.13.txt)
+When might you use an unnamed namespace?
+## [Exercise 18.14](18.14.txt)
+Suppose we have the following declaration of the operator* that is
+a member of the nested namespace mathLib::MatrixLib:
+```
+    namespace mathLib {
+        namespace MatrixLib {
+            class matrix { /* ... */ };
+            matrix operator*
+                    (const matrix &, const matrix &);
+            // ...
+        }
+    }
+```
+How would you declare this operator in global scope?
+## [Exercise 18.15](18.15.txt)
+Explain the differences between using declarations and directives.
+## [Exercise 18.16](18.16.txt)
+Explain the following code assuming using declarations for all the
+members of namespace Exercise are located at the location labeled position 1. What
+if they appear at position 2 instead? Now answer the same question but replace the
+using declarations with a using directive for namespace Exercise.
+```
+    namespace Exercise {
+        int ivar = 0;
+        double dvar = 0;
+        const int limit = 1000;
+    }
+    int ivar = 0;
+    // position 1
+    void manip() {
+        // position 2
+        double dvar = 3.1416;
+        int iobj = limit + 1;
+        ++ivar;
+        ++::ivar;
+    }
+```
+## [Exercise 18.17](18.17)
+Write code to test your answers to the previous question.

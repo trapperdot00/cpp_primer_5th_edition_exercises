@@ -1,0 +1,9 @@
+using declarations make only one member of a namespace visible,
+it can appear in global, local, namespace or class scope (only to refer to base class members)
+declares a local alias for the selected namespace member
+immediately throws an error if there is a name clash
+
+using directives make all members of a namespace visible
+it can appear in global, local or namespace scope
+lifts the namespace members in the nearest scope that contains both the namespace and the using directive
+if there is a name clash, throws error when trying to use the clashing name, not immediately

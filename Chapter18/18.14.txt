@@ -1,0 +1,5 @@
+mathLib::MatrixLib::matrix mathLib::MatrixLib::operator*(const matrix &, const matrix &);
+
+// as soon as the fully qualified name (mathLib::MatrixLib::operator*) is seen,
+// we are in the scope of that namespace,
+// so we can use matrix instead of mathLib::MatrixLib::matrix in the parameters
