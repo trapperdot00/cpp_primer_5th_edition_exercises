@@ -102,3 +102,33 @@ using declarations with a using directive for namespace Exercise.
 ```
 ## [Exercise 18.17](18.17)
 Write code to test your answers to the previous question.
+## [Exercise 18.18](18.18.txt)
+Given the following typical definition of swap § 13.3 (p. 517), determine which version of swap is used if mem1 is a string. What if mem1 is an int?
+Explain how name lookup works in both cases.
+```
+    void swap(T v1, T v2)
+    {
+        using std::swap;
+        swap(v1.mem1, v2.mem1);
+        // swap remaining members of type T
+    }
+```
+## [Exercise 18.19](18.19.txt)
+What if the call to swap was std::swap(v1.mem1, v2.mem1)?
+## [Exercise 18.20](18.20.txt)
+In the following code, determine which function, if any, matches the call to compute. List the candidate and viable functions. What type conversions, if any, are applied to the argument to match the parameter in each viable function?
+```
+    namespace primerLib {
+        void compute();
+        void compute(const void *);
+    }
+    using primerLib::compute;
+    void compute(int);
+    void compute(double, double = 3.4);
+    void compute(char*, char* = 0);
+    void f()
+    {
+        compute(0);
+    }
+```
+What would happen if the using declaration were located in main before the call to compute? Answer the same questions as before.

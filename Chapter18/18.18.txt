@@ -1,0 +1,24 @@
+since the swap function defined in the standard library is a template function,
+argument dependent lookup doesn't occur (no specific type, can accept any)
+
+the using declaration for std::swap makes the std::swap template function visible in function (local) scope,
+as a "failsafe" for all calls for swap, essentially the template function is either
+an overload for any swap calls with two parameters that has the lowest priority,
+or the only function that can be called, it depends on the types it is called with as arguments
+if the types have a swap non-member function, it will call that instead of std::swap in the std namespace
+
+argument dependent lookup (ADL) will ensure that the swap we call will be correctly identified
+via the argument types, and the compiler will look in the arguments' namespaces to find
+a more specialized function that should have greater performance
+
+	----
+
+if mem1 is a string, the string version of swap is called
+	the using declaration places the std::swap template function in scope as an alias (swap)
+	since there is a function named swap that takes two strings, all calls for swap with two
+	string arguments will call that function instead of the template one via ADL
+
+if mem1 is an int, then the library version of swap is called (std::swap)
+	the using declaration places the std::swap template function in scope as an alias (swap)
+	there are no functions named swap for ints, as it is a built-in type,
+	only function that we can call via an unqualified swap is the one in the library

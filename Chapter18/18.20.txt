@@ -1,0 +1,33 @@
+namespace primerLib {
+	void compute();
+	void compute(const void *);
+}
+using primerLib::compute;			// puts void compute(), and void compute(const void *) in the global scope
+void compute(int);
+void compute(double, double = 3.4);
+void compute(char*, char* = 0);
+
+// candidate functions:
+// void compute() from primerLib
+// void compute(const void *) from primerLib
+// void compute(int)
+// void compute(double, double = 3.4);
+// void compute(char*, char* = 0);
+
+void f()
+{
+	compute(0);
+	// void compute() not viable
+	// void compute(const void *) viable: 0 can be converted to a pointer
+	// void compute(int) viable: exact match -> this is called
+	// void compute(double, double = 3.4) viable: through int to double conversion
+	// void compute(char*, char* = 0) viable: through pointer conversion
+}
+
+if the using declaration were located in main before the call to compute:
+f would see only the global functions as candidates:
+	void compute(int),						exact match
+	void compute(double, double = 3.4)		double conversion
+	void compute(char*, char* = 0);			pointer conversion
+void compute(int) is called because it is an exact match
+
