@@ -1,0 +1,9 @@
+a)	class CADVehicle : public CAD, Vehicle { ... };
+// legal: CADVehicle inherits publicly from CAD, and inherits privately
+// (default access and inheritance specifier for class keyword) from Vehicle
+
+b)	class DblList : public List, public List { ... };
+// illegal: a base class may appear only once in a given derivation list
+
+c)	class iostream : public istream, public ostream { ... };
+// legal: iostream class inherits publicly from both istream and ostream

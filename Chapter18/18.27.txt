@@ -1,0 +1,37 @@
+int ival;
+double dval;
+void MI::foo(double cval)
+{
+	int dval;
+	
+//	a)
+//	void Base1::print(int) const visible
+//	Base1::ival visible
+//	Base1::dval visible
+//	Base1::cval visible
+//	void Derived::print(std::string) const visible
+//	Derived::sval visible
+//	Derived::dval visible
+//	void Base2::print(double) const visible
+//	Base2::fval visible
+//	void MI::print(std::vector<double>) visible
+//	MI::ival visible
+//	MI::dvec visible
+//	cval visible (parameter)
+//	dval visible (local variable)
+//	any unqualified uses of print, ival, dval, cval are an error
+
+//	b)
+//	print, ival and dval are visible from more than one base class
+
+//	c)
+	dval = Base1::dval + Derived::dval;
+
+//	d)
+	if (!dvec.empty())
+		fval = dvec.back();
+
+//	e)
+	if (!sval.empty())
+		sval.front() = Base1::cval;
+}

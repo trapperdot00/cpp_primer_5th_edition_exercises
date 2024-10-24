@@ -1,0 +1,22 @@
+Base1 *pb1 = new MI;
+Base2 *pb2 = new MI;
+D1 *pd1 = new MI;
+D2 *pd2 = new MI;
+
+a)	pb1->print();
+// calls MI::print()
+
+b)	pd1->print();
+// calls MI::print()
+
+c)	pd2->print();
+// calls MI::print()
+
+d)	delete pb2;
+// calls MI::~MI()
+
+e)	delete pd1;
+// calls MI::~MI()
+
+f)	delete pd2;
+// calls MI::~MI()

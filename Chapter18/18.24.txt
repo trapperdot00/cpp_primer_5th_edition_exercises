@@ -1,0 +1,16 @@
+ZooAnimal *pz = new Panda("ying_yang");
+
+pz->print();
+// calls Panda::print(): virtual function
+
+pz->toes();
+// error: not part of the ZooAnimal interface
+
+pz->cuddle();
+// error: not part of the ZooAnimal interface
+
+pz->highlight();
+// error: not part of the ZooAnimal interface
+
+delete pz;
+// calls Panda::~Panda(), which in turn calls its bases' destructors: virtual function

@@ -1,0 +1,39 @@
+struct Base {
+	void bar(int);
+protected:
+	int ival;
+};
+
+struct Derived1 : virtual public Base {
+	void bar(char);
+	void foo(char);
+protected:
+	char cval;
+};
+
+struct Derived2 : virtual public Base {
+	void foo(int);
+protected:
+	int		ival;
+	char	cval;
+};
+
+class VMI : public Derived1, public Derived2 {};
+
+
+
+// access through VMI:
+
+// Base::bar needs qualification, defined in both Base and Derived1
+// Base::ival needs qualification, defined in both Base and Derived2
+
+// Derived1::bar doesn't need qualification to be accessed
+// Derived1::foo needs qualification, defined in both Derived1 and Derived2
+// Derived1::cval needs qualification, defined in both Derived1 and Derived2
+
+// Derived2::foo needs qualification, defined in both Derived2 and Derived1
+// Derived2::ival doesn't need qualification to be accessed
+// Derived2::cval needs qualification, defined in both Derived2 and Derived1
+
+
+// bar and ival don't need qualification to be accessed through VMI

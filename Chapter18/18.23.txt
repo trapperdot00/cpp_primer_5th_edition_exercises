@@ -1,0 +1,16 @@
+class D : public X, public C { ... };
+D *pd = new D;
+
+a)	X *px = pd;
+// legal: X is a direct base to D
+
+b)	A *pa = pd;
+// legal: A is an indirect base to D
+// (D->C->B->A)
+
+c)	B *pb = pd;
+// legal: B is an indirect base to D
+// (D->C->B)
+
+d)	C *pc = pd;
+// legal: C is a direct base to D

@@ -132,3 +132,106 @@ In the following code, determine which function, if any, matches the call to com
     }
 ```
 What would happen if the using declaration were located in main before the call to compute? Answer the same questions as before.
+## [Exercise 18.21](18.21.txt)
+Explain the following declarations. Identify any that are in error and explain why they are incorrect:
+```
+(a) class CADVehicle : public CAD, Vehicle { ... };
+(b) class DblList: public List, public List { ... };
+(c) class iostream: public istream, public ostream { ... };
+```
+## [Exercise 18.22](18.22.txt)
+Given the following class hierarchy, in which each class defines a default constructor:
+```
+class A { ... };
+class B : public A { ... };
+class C : public B { ... };
+class X { ... };
+class Y { ... };
+class Z : public X, public Y { ... };
+class MI : public C, public Z { ... };
+```
+what is the order of constructor execution for the following definition?
+```
+MI mi;
+```
+## [Exercise 18.23](18.23.txt)
+Using the hierarchy in exercise 18.22 along with class D defined below, and assuming each class defines a default constructor, which, if any, of the following conversions are not permitted?
+```
+class D : public X, public C { ... };
+D *pd = new D;
+(a) X *px = pd;
+(b) A *pa = pd;
+(c) B *pb = pd;
+(d) C *pc = pd;
+```
+## [Exercise 18.24](18.24.txt)
+On page 807 we presented a series of calls made through a Bear pointer that pointed to a Panda object. Explain each call assuming we used a ZooAnimal pointer pointing to a Panda object instead.
+## [Exercise 18.25](18.25.txt)
+Assume we have two base classes, Base1 and Base2, each of which defines a virtual member named print and a virtual destructor. From these base classes we derive the following classes, each of which redefines the print function:
+```
+class D1 : public Base1 { /* . . . */ };
+class D2 : public Base2 { /* . . . */ };
+class MI : public D1, public D2 { /* . . . */ };
+```
+Using the following pointers, determine which function is used in each call:
+```
+Base1 *pb1 = new MI;
+Base2 *pb2 = new MI;
+D1 *pd1 = new MI;
+D2 *pd2 = new MI;
+
+(a) pb1->print();
+(b) pd1->print();
+(c) pd2->print();
+(d) delete pb2;
+(e) delete pd1;
+(f) delete pd2;
+```
+## [Exercise 18.26](18.26)
+Given the hierarchy in the box on page 810, why is the following call to print an error? Revise MI to allow this call to print to compile and execute correctly.
+```
+MI mi;
+mi.print(42);
+```
+## [Exercise 18.27](18.27.txt)
+Given the class hierarchy in the box on page 810 and assuming we add a function named foo to MI as follows:
+```
+int ival;
+double dval;
+void MI::foo(double cval)
+{
+    int dval;
+    // exercise questions occur here
+}
+
+(a) List all the names visible from within MI::foo.
+(b) Are any names visible from more than one base class?
+(c) Assign to the local instance of dval the sum of the dval member of Base1 and the dval member of Derived.
+(d) Assign the value of the last element in MI::dvec to Base2::fval.
+(e) Assign cval from Base1 to the first character in sval from Derived.
+```
+## [Exercise 18.28](18.28.txt)
+Given the following class hierarchy, which inherited members can be accessed without qualification from within the VMI class? Which require qualification? Explain your reasoning.
+```
+struct Base {
+    void bar(int);  // public by default
+protected:
+    int ival;
+};
+
+struct Derived1 : virtual public Base {
+    void bar(char); // public by default
+    void foo(char);
+protected:
+    char cval;
+};
+
+struct Derived2 : virtual public Base {
+    void foo(int);  // public by default
+protected:
+    int ival;
+    char cval;
+};
+
+class VMI : public Derived1, public Derived2 { };
+```

@@ -1,0 +1,15 @@
+MI mi;
+
+// MI's constructor invokes C's constructor
+// C's constructor invokes B's constructor
+// B's constructor invokes A's constructor
+// A's constructor's body is run
+// B's constructor's body is run
+// C's constructor's body is run
+// MI's constructor invokes Z's constructor
+// Z's constructor invokes X's constructor
+// X's constructor's body is run
+// Z's constructor invokes Y's constructor
+// Y's constructor's body is run
+// Z's constructor's body is run
+// MI's constructor's body is run
