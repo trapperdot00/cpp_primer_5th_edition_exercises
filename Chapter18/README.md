@@ -235,3 +235,28 @@ protected:
 
 class VMI : public Derived1, public Derived2 { };
 ```
+## [Exercise 18.29](18.29.txt)
+Given the following class hierarchy:
+```
+class Class { ... };
+class Base : public Class { ... };
+class D1 : virtual public Base { ... };
+class D2 : virtual public Base { ... };
+class MI : public D1, public D2 { ... };
+class Final : public MI, public Class { ... };
+```
+(a) In what order are constructors and destructors run on a Final object?
+(b) A Final object has how many Base parts? How many Class parts?
+(c) Which of the following assignments is a compile-time error?
+```
+Base *pb;
+Class *pc;
+MI *pmi;
+D2 *pd2;
+(a) pb = new Class;
+(b) pc = new Final;
+(c) pmi = pb;
+(d) pd2 = pmi;
+```
+## [Exercise 18.30](18.30)
+Define a default constructor, a copy constructor, and a constructor that has an int parameter in Base. Define the same three constructors in each derived class. Each constructor should use its argument to initialize its Base part.

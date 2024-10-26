@@ -1,0 +1,44 @@
+class Class { ... };
+class Base : public Class { ... };
+class D1 : virtual public Base { ... };
+class D2 : virtual public Base { ... };
+class MI : public D1, public D2 { ... };
+class Final : public MI, public Class { ... };
+
+a)
+// construction of Final object:
+	// Class();
+	// Base();
+	// D1();
+	// D2();
+	// MI();
+	// Class();
+	// Final();
+
+// destruction of Final object:
+	// ~Final();
+	// ~Class();
+	// ~MI();
+	// ~D2();
+	// ~D1();
+	// ~Base();
+	// ~Class();
+
+b)
+// a Final object has:
+	// 1 Base part (virtual shared between D1 and D2)
+	// 2 Class parts (the virtual Base brings one in, and a non-virtual direct base)
+
+c)
+Base *pb;
+Class *pc;
+MI *pmi;
+D2 *pd2;
+	a)	pb = new Class;
+		// error: Class has no base class of Base
+	b)	pc = new Final;
+		// error: ambiguous base: two Class subobjects in Final
+	c)	pmi = pb;
+		// error: Base has no base class of MI
+	d)	pd2 = pmi;
+		// legal: D2 is a base class of MI
