@@ -1,0 +1,1 @@
+in the std::for_each destroy loop, we don't destroy elements in reverse order: might be a problem. prefer for loop instead

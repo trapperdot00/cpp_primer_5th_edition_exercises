@@ -21,3 +21,4 @@
 ## Part IV - Advanced Topics
 ### [Chapter17](Chapter17/): Specialized Library Facilities
 ### [Chapter18](Chapter18/): Tools for Large Programs
+### [Chapter19](Chapter19/): Specialized Tools and Techniques
