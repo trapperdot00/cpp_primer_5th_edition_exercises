@@ -1,0 +1,18 @@
+class A { /* ... */ };
+class B : public A { /* ... */ };
+class C : public B { /* ... */ };
+class D : public B, public A { /* ... */ };
+
+a)	A *pa = new C;				// pa is a pointer to indirect base
+	B *pb = dynamic_cast<B *>(pa);
+// legal: pb points to the B subobject in the object of class type 'C'
+
+b)	B *pb = new B;
+	C *pc = dynamic_cast<C *>(pb);
+// error: object of class type 'B' doesn't have a C subobject:
+// pc will be a nullptr!
+
+c)	A *pa = new D;		// ambiguous: either D->A or D->B->A
+	B *pb = dynamic_cast<B *>(pa);
+
+// error: ambiguous base, won't even compile

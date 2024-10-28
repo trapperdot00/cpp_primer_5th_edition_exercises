@@ -1,0 +1,2 @@
+when we want to make an operation through a pointer to base, or a reference to base, 
+that we can only do on a derived object, and that operation is not possible with a virtual function
