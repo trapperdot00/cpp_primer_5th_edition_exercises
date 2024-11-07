@@ -1,0 +1,20 @@
+class A { /* ... */ };
+class B : public A { /* ... */ };
+class C : public B { /* ... */ };
+
+(a)	A *pa = new C;
+	cout << typeid(pa).name() << endl;
+
+	// prints name of type: A *
+
+(b)	C cobj;
+	A& ra = cobj;
+	cout << typeid(&ra).name() << endl;
+
+	// prints name of type: A *
+
+(c)	B *px = new B;
+	A& ra = *px;
+	cout << typeid(ra).name() << endl;
+
+	// prints name of type: B

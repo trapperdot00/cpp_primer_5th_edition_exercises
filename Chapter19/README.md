@@ -37,3 +37,23 @@ Write an expression to dynamically cast a pointer to a Query_base to a pointer t
 Write the same cast, but cast a Query_base object to a reference to AndQuery. Repeat the test to ensure that your cast works correctly.
 ## [Exercise 19.8](19.08)
 Write a typeid expression to see whether two Query_base pointers point to the same type. Now check whether that type is an AndQuery.
+## [Exercise 19.9](19.09)
+Write a program similar to the last one in this section to print the names your compiler uses for common type names. If your compiler gives output similar to ours, write a function that will translate those strings to more human-friendly form.
+## [Exercise 19.10](19.10.txt)
+Given the following class hierarchy in which each class defines a
+public default constructor and virtual destructor, which type name do the follow-
+ing statements print?
+```
+class A { /* . . . */ };
+class B : public A { /* . . . */ };
+class C : public B { /* . . . */ };
+
+(a) A *pa = new C;
+    cout << typeid(pa).name() << endl;
+(b) C cobj;
+    A& ra = cobj;
+    cout << typeid(&ra).name() << endl;
+(c) B *px = new B;
+    A& ra = *px;
+    cout << typeid(ra).name() << endl;
+```
