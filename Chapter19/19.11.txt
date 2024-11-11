@@ -1,0 +1,2 @@
+an ordinary data pointer points to an existing object's data member, requires an existing object
+a pointer to a data member can point to any non-static data member, and can be used on objects to call the member on, it doesn't require an existing object

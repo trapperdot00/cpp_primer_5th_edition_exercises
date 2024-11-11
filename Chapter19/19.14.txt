@@ -1,0 +1,6 @@
+auto pmf = &Screen::get_cursor;
+pmf = &Screen::get;
+
+// pmf has type of "char (Screen::*)() const"
+// pmf points to "char get() const" at the end
+// legal

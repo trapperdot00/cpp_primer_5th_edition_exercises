@@ -57,3 +57,21 @@ class C : public B { /* . . . */ };
     A& ra = *px;
     cout << typeid(ra).name() << endl;
 ```
+## [Exercise 19.11](19.11.txt)
+What is the difference between an ordinary data pointer and a pointer to a data member?
+## [Exercise 19.12](19.12)
+Define a pointer to member that can point to the cursor member of class Screen. Fetch the value of Screen::cursor through that pointer.
+## [Exercise 19.13](19.13)
+Define the type that can represent a pointer to the bookNo member of the Sales_data class.
+## [Exercise 19.14](19.14.txt)
+Is the following code legal? If so, what does it do? If not, why?
+```
+auto pmf = &Screen::get_cursor;
+pmf = &Screen::get;
+```
+## [Exercise 19.15](19.15.txt)
+What is the difference between an ordinary function pointer and a pointer to a member function?
+## [Exercise 19.16](19.16)
+Write a type alias that is a synonym for a pointer that can point to the avg_price member of Sales_data.
+## [Exercise 19.17](19.17)
+Define a type alias for each distinct Screen member function type.

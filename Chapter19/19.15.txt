@@ -1,0 +1,5 @@
+ordinary function pointers can point to nonmember functions, conversion from function to pointer happens automatically
+
+pointer to member functions can point to member functions, conversion from member function to pointer to member functions don't happen automatically, need to include the address-of operator (&)
+these pointers can be called on objects, but they can exist without binding an object to the member function
+we need to include the const qualifier of l/r-value reference qualifier on the pointer to member function declaration
