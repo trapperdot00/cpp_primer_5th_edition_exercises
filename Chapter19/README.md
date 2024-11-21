@@ -75,3 +75,9 @@ What is the difference between an ordinary function pointer and a pointer to a m
 Write a type alias that is a synonym for a pointer that can point to the avg_price member of Sales_data.
 ## [Exercise 19.17](19.17)
 Define a type alias for each distinct Screen member function type.
+## [Exercise 19.18](19.18.cpp)
+Write a function that uses count_if to count how many empty strings there are in a given vector.
+## [Exercise 19.19](19.19)
+Write a function that takes a vector<Sales_data> and finds the first element whose average price is greater than some given amount.
+## [Exercise 19.20](19.20)
+Nest your QueryResult class inside TextQuery and rerun the programs you wrote to use TextQuery in § 12.3.2 (p. 490).
