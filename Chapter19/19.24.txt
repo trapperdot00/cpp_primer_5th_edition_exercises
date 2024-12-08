@@ -1,0 +1,13 @@
+if we copy-assign a Token object to itself, no destruction is done, as it would
+be done only if the discriminants don't match and the left-hand side object has
+a union initialized by a class type
+if the union holds an std::string, the std::string copy-assignment operator 
+guarantees that nothing really bad happens in case of self-assignment
+if the union holds a Sales_data, the Sales_data class' copy-assignment operator
+guarantees the same
+if the union holds a built-in type, copyUnion is called, which assigns the value
+to itself, but this is not a problem, because self-assignment for built-ins is ok
+
+if we move-assign a Token object to itself, the move-assignment function is simply
+quit, as my implementation checks that the object on the left-hand side and the 
+right-hand side resides in the same memory address, explicitly

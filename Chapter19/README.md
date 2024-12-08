@@ -81,3 +81,13 @@ Write a function that uses count_if to count how many empty strings there are in
 Write a function that takes a vector<Sales_data> and finds the first element whose average price is greater than some given amount.
 ## [Exercise 19.20](19.20)
 Nest your QueryResult class inside TextQuery and rerun the programs you wrote to use TextQuery in § 12.3.2 (p. 490).
+## [Exercise 19.21](19.21)
+Write your own version of the Token class.
+## [Exercise 19.22](19.22)
+Add a member of type Sales_data to your Token class.
+## [Exercise 19.23](19.23)
+Add a move constructor and move assignment to Token.
+## [Exercise 19.24](19.24.txt)
+Explain what happens if we assign a Token object to itself.
+## [Exercise 19.25](19.25)
+Write assignment operators that take values of each type in the union.
