@@ -91,3 +91,9 @@ Add a move constructor and move assignment to Token.
 Explain what happens if we assign a Token object to itself.
 ## [Exercise 19.25](19.25)
 Write assignment operators that take values of each type in the union.
+## [Exercise 19.26](19.26.txt)
+Explain these declarations and indicate whether they are legal:
+```
+extern "C" int compute(int *, int);
+extern "C" double compute(double *, double);
+```

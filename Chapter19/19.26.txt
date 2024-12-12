@@ -1,0 +1,8 @@
+extern "C" int compute(int *, int);
+// compute is a C function that returns int, takes a pointer to int and an int
+
+extern "C" double compute(double *, double);
+// compute is a C function that returns double, takes a pointer to double and a double
+
+// As C doesn't support function overloading, this code is not legal
+// We can specify a C linkage directive for only one function in a set
